@@ -1,0 +1,166 @@
+//File name - HydraDef.
+
+
+#ifndef HYDRA_DEF_H
+#define HYDRA_DEF_H	
+
+
+
+enum HydraRetCode {
+					HYDRA_OK,					//0
+					HYDRA_NOT_SYNC,				//1
+					HYDRA_MSG_NOT_READY,		//2
+					HYDRA_MSG_TOO_LONG,			//3
+					HYDRA_REG_BAD_SERVER_NAME,	//4
+					HYDRA_REG_BAD_SECTION_NAME,	//5
+					HYDRA_REG_BAD_KEY_NAME,		//6
+					HYDRA_REG_BAD_KEY_VALUE,	//7
+					HYDRA_MSG_QUEUE_EMPTY,		//8
+					HYDRA_MSG_QUEUE_ERR,		//9
+					HYDRA_SEND_MSG_ERR,			//10
+					HYDRA_QDEX_ERR,				//11
+					HYDRA_REC_NOT_VALID,		//12
+					HYDRA_EVENTS_MAP_EMPTY,		//13
+					HYDRA_QDX_SETWORKINGDIR_ERR,//14
+					HYDRA_QDX_BATCH_FILE_ERR,	//15
+					HYDRA_CURR_REC_NOT_VALID,	//16	//1.0.0.55
+					HYDRA_FILE_PATH_TOO_LONG,	//17	//1.0.0.57 
+					HYDRA_FAIL_OPEN_FILE,		//18	//1.0.0.61
+					HYDRA_FAIL_GET_FILE_TIME,	//19
+					HYDRA_FILE_EXISTS_IN_LIST,	//20
+					HYDRA_FILE_NOT_IN_LIST,		//21
+					HYDRA_FAIL_DELETE_FROM_INI,	//22
+					HYDRA_BAD_FILE_NAME,		//23
+					HYDRA_PREFIX_TOO_LONG,		//24
+					HYDRA_FAIL_GET_FILE_SIZE,	//25
+					HYDRA_FILE_SIZE_TOO_BIG,	//26
+					HYDRA_FAIL_COPY_FILE,		//27
+					HYDRA_FAIL_DELETE_FILE,		//28
+					HYDRA_FAIL_RENAME_FILE,		//29
+					HYDRA_FILE_LIST_EMPTY,		//30
+					
+};
+
+//This are the interfaces return codes
+enum CFGDBRetCode {
+
+					CFGDB_OK,								//0
+					CFGDB_FAILED_TO_OPEN_TABLE,				//1
+					CFGDB_PARAM_NOT_FOUND_AND_CREATED,		//2 in the get functions means param not found.
+					CFGDB_PARAM_NOT_FOUND_FAILED_TO_CREATE,	//3
+					CFGDB_PARAM_NOT_FOUND,					//4
+					CFGDB_SERVER_NAME_TOO_LONG,				//5
+					CFGDB_TABLE_NAME_TOO_LONG,				//6
+					CFGDB_FIELD_NAME_TOO_LONG,				//7
+					CFGDB_DEFAULT_FIELD_VAL_TOO_LONG,		//8
+					CFGDB_FIELD_EMPTY,						//9
+					CFGDB_INVALID_GROUP_NUMBER,				//10
+					CFGDB_INVALID_EVENT_GROUP_NUMBER,		//11
+					CFGDB_EXCEPTION_ERROR,					//12
+};
+
+//This are the CTRL interfaces return codes
+enum HydraCTRLRetCode
+{
+	HYDRA_CTRL_OK,						//0
+	HYDRA_CTRL_PARAM_NOT_VALID,			//1
+	HYDRA_CTRL_INVALID_GROUP_NUMBER,	//2
+	HYDRA_CTRL_BUFF_NAMES_TOO_SMALL,	//3
+	HYDRA_CTRL_NO_EVENTS_CLIENTS,		//4
+	HYDRA_CTRL_FILE_LIST_EMPTY,			//5
+	HYDRA_CTRL_FAIL_TO_SET_INFO,		//6
+};
+
+//Those are the FB interfaces return codes
+enum FBURetCode
+{
+	FBU_OK,						//0
+	FBU_FILE_PATH_TOO_LONG,		//1
+	FBU_FILE_EXISTS_IN_LIST,	//2
+	FBU_FILE_NOT_IN_LIST,		//3
+	FBU_FAIL_DELETE_FROM_INI,	//4
+	FBU_INVALID_GROUP_NUMBER,	//5
+	FBU_EXCEPTION_ERROR,		//6
+	FBU_FAIL_OPEN_FILE,			//7
+	FBU_UNSPECIFIC_ERROR,		//8
+	FBU_FILE_SIZE_TOO_BIG,		//9		1.0.0.64
+	
+};
+
+//#define RTDB Return codes 
+
+#define RTDB_OK								0
+#define RTDB_Q_ERROR						0x80
+#define RTDB_ERR_NOT_FOUND					1
+#define RTDB_ERR_INDX_START					2
+#define RTDB_ERR_INDX_READD					3
+#define RTDB_ERR_DELETED					4
+#define RTDB_ERR_EXISTS						5
+#define RTDB_ERR_DISK_READ					6
+#define RTDB_ERR_DISK_WRITE					7
+#define RTDB_ERR_INDX_NOT_LOADED			8
+#define RTDB_ERR_INDX_WRITE					9
+#define RTDB_ERR_INDX_DISK_MATCH			0xA
+#define RTDB_ERR_FILE_NOT_OPENED			0xB
+#define RTDB_ERR_LOAD_FAIL					0xC
+#define RTDB_ERR_BAD_FUNCTION_SECTION		0x20
+#define RTDB_ERR_FILE_FULL					0x21
+#define RTDB_ERR_RECORD_OVERFLOW			0x22
+#define RTDB_ERR_EXP_NOT_FOUND				0x23
+#define RTDB_ERR_EXP 						0x24
+#define RTDB_ERR_EXP_FILE_FULL				0x25
+#define RTDB_ERR_EXP_DELETED				0x26
+#define RTDB_ERR_EXP_EXISTS					0x27
+#define RTDB_ERR_SUP_IDX					0x28
+#define RTDB_ERR_NOT_OPENED					0x29
+#define RTDB_ERR_SEEK						0x2A
+#define RTDB_ERR_MAP 						0xFD
+#define RTDB_ERR_DRVPOS						0xFE
+#define RTDB_BAD_FUNCTION_NO				0xFF
+#define RTDB_Q_DEX_BUSY						0x100
+#define RTDB_Q_DEX_FILE_NOT_VALID			0x101
+#define RTDB_MISSING_PARAMETER				0x102
+#define RTDB_BUFFER_TO_LONG					0x103
+#define RTDB_OPERATION_MODE_NOT_VALID		0x104
+#define RTDB_INVALID_GROUP_NUMBER			0x105
+#define RTDB_EXCEPTION_ERROR				0x106
+
+//We are using the first byte in the long flag number for the operation.
+#define	HOP_DEFAULT_CONFIG		0x0
+#define HOP_DIRECT_LOCAL		0x1
+#define HOP_HYDRA_LOCAL_ONLY	0x2
+#define HOP_HYDRA_REMOTE_ONLY	0x4
+#define HOP_CFG_INI_FILE		0x8	//For supporting ini file backup.
+
+//Events Flag
+#define SET_RECORD_EVENT		0x1
+#define INI_FILE_EVENT			0x2
+
+//Interfaces types
+#define RT_INTERFACE		1
+#define CFG_INTERFACE		2
+#define CTL_INTERFACE		3
+#define FB_INTERFACE		4	//1.0.0.61
+
+enum HydServiceState {
+				HYDSERVICE_IDLE,				//
+				HYDSERVICE_NO_BACKUP_DATABASE,	//								
+};
+
+enum UpdateDataState {
+				UPDATE_IN_PROCESS,				//
+				UPDATE_COMPLETE,				//								
+};
+
+//1.0.0.619 SetServerParam params flags
+#define PARAM_IS_NEXT_TO_PROCESS_MSG	0x00000001	
+#define PARAM_IS_NEXT_TO_PROCESS_REC	0x00000002
+#define PARAM_IS_LAST_RECV_MSG			0x00000004	
+#define PARAM_IS_LAST_RECV_REC			0x00000008	
+#define PARAM_IS_OUTBOX_NEXT_REC_INDEX	0x00000010	
+#define PARAM_IS_MSG_NUMERATOR			0x00000020	
+#define PARAM_IS_OUT_TO_NUMBER			0x00000040
+#define PARAM_IS_IN_TO_NUMBER			0x00000080
+	
+
+#endif //HYDRA_DEF_H

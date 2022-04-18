@@ -1,0 +1,22 @@
+HKCR
+{
+	PumpSrv.Ctrl.1 = s 'Ctrl Class'
+	{
+		CLSID = s '{43464622-C31A-11D1-8625-0000E81A8D8B}'
+	}
+	PumpSrv.Ctrl = s 'Ctrl Class'
+	{
+		CurVer = s 'PumpSrv.Ctrl.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {43464622-C31A-11D1-8625-0000E81A8D8B} = s 'Ctrl Class'
+		{
+			ProgID = s 'PumpSrv.Ctrl.1'
+			VersionIndependentProgID = s 'PumpSrv.Ctrl'
+			ForceRemove 'Programmable'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '{455634A2-1A48-11D1-B8A5-0000E8D0CBF8}'
+		}
+	}
+}

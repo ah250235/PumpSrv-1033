@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:attribute name="pumpStatus">
+                        <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                                <xs:enumeration value="AVAILABLE"/>
+                                                <xs:enumeration value="INUSE"/>
+                                                <xs:enumeration value="OFFLINE"/>
+                                    </xs:restriction>
+                        </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="PumpNumber" type="xs:int"/>
+            <xs:attribute name="IsAllowed">
+                        <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                                <xs:enumeration value="FALSE"/>
+                                                <xs:enumeration value="TRUE"/>
+                                    </xs:restriction>
+                        </xs:simpleType>
+            </xs:attribute>
+            <xs:element name="PumpsInfo">
+                        <xs:complexType>
+                                    <xs:sequence>
+                                                <xs:element ref="PumpInfo" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                        </xs:complexType>
+            </xs:element>
+            <xs:element name="PumpInfo">
+                        <xs:complexType>
+                                    <xs:attribute ref="pumpStatus" use="required"/>
+                                    <xs:attribute ref="PumpNumber" use="required"/>
+                                    <xs:attribute ref="IsAllowed" use="required"/>
+                        </xs:complexType>
+            </xs:element>
+</xs:schema>

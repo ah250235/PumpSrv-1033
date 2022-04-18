@@ -1,0 +1,572 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "1 TYPELIB ""PumpSrv.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 4,0,33,404
+ PRODUCTVERSION 4,0,33,404
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x21L
+#else
+ FILEFLAGS 0x20L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Retalix"
+            VALUE "FileDescription", "PumpSrv Module"
+            VALUE "FileVersion", "4.0.33.404"
+            VALUE "InternalName", "PUMPSRV"
+            VALUE "LegalCopyright", "Copyright © 2020"
+            VALUE "OriginalFilename", "PUMPSRV.EXE"
+            VALUE "ProductName", "PumpSrv Module"
+            VALUE "ProductVersion", "4.0.33.404"
+            VALUE "SpecialBuild", "Build 1033"
+            VALUE "VP Interface Version", "1.0"
+        END
+        BLOCK "040d04b0"
+        BEGIN
+            VALUE "CompanyName", "NCR"
+            VALUE "FileDescription", "PumpSrv"
+            VALUE "FileVersion", "4.0.33.404"
+            VALUE "InternalName", "PumpSrv"
+            VALUE "LegalCopyright", "Copyright © 2020"
+            VALUE "OriginalFilename", "PumpSrv.exe"
+            VALUE "ProductName", "POS PumpSrv"
+            VALUE "ProductVersion", "4.0.33.404"
+            VALUE "SpecialBuild", "Build : 1033"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200, 0x40d, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_PumpSrv             REGISTRY                "PumpSrv.rgs"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_PROJNAME            "PumpSrv"
+    IDS_GPI_OK              "No error"
+    IDS_GPI_POS_ALREADY_CONNECTED "POS is already connected"
+    IDS_GPI_DUPLICATE_POS_NUMBER 
+                            "A POS with this ID number has already connected to PumpSrv"
+    IDS_GPI_MSG_SENT        "The message has already been sent"
+    IDS_GPI_NOT_SUPPORTED   "Requsted operation or flag is not supported"
+    IDS_GPI_SERVER_NOT_READY "Server not ready - Convert Layer in unavailable"
+    IDS_GPI_INVALID_PUMP_NUMBER "Pump number is invalid"
+    IDS_GPI_PUMP_NOT_REQUESTING 
+                            "Attempted to authorize a pump which was not requesting"
+    IDS_GPI_PUMP_NOT_SUSPENDED "Pump is not suspended"
+    IDS_GPI_TRS_LIST_FULL   "The maximum amount of stacked transactions has been reached"
+    IDS_GPI_TRS_LOCKED      "Transaction locked"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_GPI_TRS_NOT_RESERVED "The transaction has not been reserved"
+    IDS_GPI_TRS_NOT_FOUND   "The transaction has not been found"
+    IDS_GPI_TRS_NOT_FOR_SALE "Transaction is not for sale"
+    IDS_GPI_TRS_NOT_PREPAY  "Transaction is not a prepaid transaction"
+    IDS_GPI_UNKNOWN_TRS_STATE "Transaction state is unknown"
+    IDS_GPI_PUMP_ALREADY_SUSPENDED "Pump has already been suspended"
+    IDS_GPI_MUST_INIT_FIRST "The GPI interface must be initialized first"
+    IDS_GPI_INVALID_POS_NUMBER "The POS number is invalid"
+    IDS_GPI_ONE_OF_PUMP_TRS_ON_OFFER 
+                            "One of the pumps transactions is ""On Offer"""
+    IDS_GPI_FAILED_PREPAY_IO "Failed to insert transaction record to QDEX"
+    IDS_GPI_TRS_WAIT_IN_LIST "Transaction queued in waiting transaction list"
+    IDS_GPI_TRS_FIRST_IN_LIST "Transaction first in waiting transaction list"
+    IDS_GPI_TRS_ALREADY_IN_PROGRESS "The transaction is already in progress"
+    IDS_GPI_DUPLICATE_SYNC_NUMBER "Transaction sync number already exists"
+    IDS_GPI_CANT_CANCEL_TRS "Transaction could not be cancelled"
+    IDS_GPI_TRS_NOT_TIMEOUT "The transaction has not timed out"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_GPI_PUMP_NOT_IN_WORKING_STATE "Pump not working"
+    IDS_GPI_PUMP_LOCKED     "Pump is locked"
+    IDS_GPI_FAILED_IO       "Error in method I/O"
+    IDS_PUMP_ALREADY_RESERVED "Pump has already been reserved"
+    IDS_GPI_TRS_NOT_ACCEPTED "Transaction has not been accepted"
+    IDS_GPI_PUMP_NOT_IN_VIEW "Pump not in view"
+    IDS_GPI_INVALID_PUMP_MODE "Pump mode is invalid"
+    IDS_GPI_NOT_VALID_IN_CURRENT_MODE 
+                            "Requested operation not allowed in current mode"
+    IDS_GPI_TABLE_NAME_TOO_LONG "Table name too long"
+    IDS_GPI_FIELD_NAME_TOO_LONG "Field name too long"
+    IDS_GPI_FAILED_TO_OPEN_TABLE "Failed to open table"
+    IDS_GPI_PARAM_NOT_FOUND_FAILED_TO_CREATE 
+                            "Requested parameter could not be found and could not be created"
+    IDS_GPI_PARAM_NOT_FOUND "Could not find requested parameter"
+    IDS_GPI_INVALID_TABLE_NAME "Table name invalid"
+    IDS_GPI_INVALID_FIELD_NAME "Field name not valid"
+    IDS_GPI_INVALID_PROCESS_NUMBER "Process number is not valid"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_INVALID_CAR_WASH_CODE "Car wash code not valid"
+    IDS_GPI_LAST_ERROR      "Log message contains system's last error"
+    IDS_GPI_CAR_WASH_NOT_ACTIVE "Car wash is inactive"
+    IDS_GPI_RESTAT_PUMP_NOT_ALLOWED "Restarting pump is not allowed"
+    IDS_GPI_WAIT_FOR_CONTROLLER_TRS_UPDATE 
+                            "Wait for controller to update transaction"
+    IDS_GPI_NO_RECEIPT      "Receipt record not found"
+    IDS_GPI_SERVICE_FEE_NOT_VALID "Service fee not valid"
+    IDS_GPI_INVALID_GRADE_NUMBER "Grade number not valid"
+    IDS_GPI_INVALID_LEVEL_NUMBER "Price level number not valid"
+    IDS_GPI_INVALID_SERVICE_MODE_NUMBER "Service mode number is not valid"
+    IDS_GPI_INVALID_TANK_NUMBER "Tank number not valid"
+    IDS_GPI_TANK_NOT_VALID  "Tank is not configured as a valid tank"
+    IDS_GPI_POS_VOID_NOT_ALLOWED "Transaction cannot be made void by POS"
+    IDS_GPI_DUPLICATE_TRS   "Transaction already exists"
+    IDS_GPI_TRS_PARAM_NOT_VALID 
+                            "One of the transaction parameters is not valid"
+    IDS_GPI_CANNOT_PRINT_RECEIPT 
+                            "Could not print receipt (max copies already printed)"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_GPI_SERVER_IN_MIDDLE_RECOVERY_PROCESS 
+                            "Server in middle of recovery process"
+    IDS_GPI_CONTROLLER_NOT_AVAILABLE "Controller/convert layer not available"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_GPI_SYSTEM_DOWN_PAK_ENABLED 
+                            "Server not IDLE, but PAK finalization is enabled"
+    IDS_GPI_SYSTEM_DOWN_QDEX_NOT_READY 
+                            "Server in start up status because qdex is not ready"
+    IDS_GPI_DELIVERY_START_AFTER_START 
+                            "Error in Delivery: Trying to perform start after start"
+    IDS_GPI_DELIVERY_END_AFTER_END 
+                            "Error in Delivery: Trying to perform end after end"
+    IDS_GPI_DELIVERY_START_IN_MIDDLE_OF_END 
+                            "Error in Delivery: Trying to perform start in the middle of end"
+    IDS_GPI_DELIVERY_END_IN_MIDDLE_OF_START 
+                            "Error in Delivery: Trying to perform end in the middle of start"
+    IDS_GPI_IN_MIDDLE_OF_PROCESS "System in middle of process"
+    IDS_GPI_SERVER_NOT_AVAILABLE "PumpSrv not available"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_GCI_OK              "No error"
+    IDS_GCI_MUST_INIT_FIRST "GCI has not been initialized"
+    IDS_GCI_INVALID_PUMP_NUMBER "Pump number is not valid"
+    IDS_GCI_UNKNOWN_PUMP_STATUS "Pump status is unknown"
+    IDS_GCI_UNKNOWN_PUMP_RESERVATION "Pump reservation unknown"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_GCI_UNKNOWN_PUMP_DEVICE "Pump device unknown"
+    IDS_GCI_UNKNOWN_TRANSACTION_STATUS "Transaction status is unknown"
+    IDS_GCI_PUMP_TRS_LIST_IS_FULL 
+                            "The maximum number of stacked transactions has been reached"
+    IDS_GCI_PUMP_ALREADY_HAVE_IN_PROGRESS_TRS 
+                            "Pump already has a transaction in progress"
+    IDS_GCI_TRS_NOT_FOUND   "Transaction not found"
+    IDS_GCI_TRS_NOT_CURRENT "Transaction is not the current transaction on pump"
+    IDS_GCI_NO_WAITING_TRS  "No waiting transactions found"
+    IDS_GCI_CANT_CANCEL_TRS "Could not cancel transaction"
+    IDS_GCI_INVALID_TANK_NUMBER "Tank number is not valid"
+    IDS_GCI_INVALID_GRADE_NUMBER "Grade number not valid"
+    IDS_GCI_NOT_SUPPORTED   "Requested operation not supported"
+    IDS_GCI_PUMP_NOT_IN_WORKING_STATE "Pump not working"
+    IDS_GCI_INVALID_SEQ_NUMBER "Sequence number not valid"
+    IDS_GCI_TRS_DUPLICATE_UPDATE "Transaction has already been updated"
+    IDS_GCI_TRS_ALREADY_PAID "Transaction has already been paid"
+    IDS_GCI_TRS_MISMATCH    "Transaction mismatch"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_GCI_FAILED_IO       "Bad method I/O"
+    IDS_GCI_REPEATED_PAP_SWIPE_REQUEST "PAP swipe request repeated"
+    IDS_GCI_TABLE_NAME_TOO_LONG "Table name too long"
+    IDS_GCI_FIELD_NAME_TOO_LONG "Field name too long"
+    IDS_GCI_DEFAULT_FIELD_VAL_TOO_LONG 
+                            "The default value for this field is too long"
+    IDS_GCI_FAILED_TO_OPEN_TABLE 
+                            "Failed to open table, parameter set to default"
+    IDS_GCI_PARAM_NOT_FOUND "Parameter not found"
+    IDS_GC_PARAM_NOT_FOUND_AND_CREATED 
+                            "Parameter not found, created with default value"
+    IDS_GCI_PARAM_NOT_FOUND_FAILED_TO_CREATE 
+                            "Parameter not found, failed to create, value set to default"
+    IDS_GCI_PAP_REQUEST_OUT_OF_SYNC 
+                            "PAP request out of sync (transaction sync number not consistant)"
+    IDS_GCI_NOT_VALID_IN_CURRENT_MODE 
+                            "Requested operation not allowed in current mode"
+    IDS_GCI_INVALID_LEVEL_NUMBER "Price level number not valid"
+    IDS_GCI_INVALID_NOZZLE_NUMBER "Nozzle number not valid"
+    IDS_GCI_INVALID_PUMP_MODE "Pump mode not valid"
+    IDS_GCI_INVALID_INDEX_NUMBER "Index number not valid"
+    IDS_GCI_AVI_CONFLICT_STATUS 
+                            "Current status is in conflict with AVI request"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_GCI_FORCE_CLEAR_PAP_TRS "Clear OLA wait progress trs. "
+    IDS_GCI_FORECOURT_EMERGENCY_LOCKED "Forecourt is Emergency Locked"
+    IDS_GCI_CONVERT_OLA_TRNSACTION_TO_PAK 
+                            "Ola transaction was convert to PAK transaction."
+    IDS_GCI_DELIVERY_START_AFTER_START 
+                            "Error in Delivery: Trying to perform start after start"
+    IDS_GCI_DELIVERY_END_AFTER_END 
+                            "Error in Delivery: Trying to perform end after end"
+    IDS_GCI_DELIVERY_START_IN_MIDDLE_OF_END 
+                            "Error in Delivery: Trying to perform start in the middle of end"
+    IDS_GCI_DELIVERY_END_IN_MIDDLE_OF_START 
+                            "Error in Delivery: Trying to perform end in the middle of start"
+    IDS_GCI_RECORD_NOT_FOUND "Record not found, "
+    IDS_GCI_PAK_RECONCILE_TRS "Automatic reconcil PAK"
+    IDS_GCI_WRONG_ATT       "Wrong Attendant"
+    IDS_GCI_SHIFT_START_WITH_PUMP_NOT_IDLE "Shift begin with pump not IDLE"
+    IDS_GCI_CASH_ACCEPTOR_REPORT_NOT_ACTIVE "Cash acceptor report not active"
+    IDS_GCI_NOT_ALL_DRAWERS_REMOVED "Not all drawers were removed."
+    IDS_GCI_INVALID_TERMINAL_NUMBER "Terminal not valid"
+    IDS_GCI_CASH_ACCEPTOR_REPORT_NOT_FOUND "Cash acceptor report not found"
+    IDS_GCI_SERVER_IN_MIDDLE_RECOVERY_PROCESS 
+                            "Server in middle of recovery process"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_GCI_LAST_ERROR      "Log message contains last Windows system error"
+    IDS_GCI_CARD_NOT_APPROVED "Credit card not approved"
+    IDS_GCI_FIELD_EMPTY     "Field is empty"
+    IDS_GCI_INVALID_VALUES  "Values received are not valid"
+    IDS_GCI_NO_CAR_WASH_REQUEST "No car wash request found"
+    IDS_GCI_TRS_CONVERTED_TO_PAK "Transaction converted to P@K"
+    IDS_GCI_NO_RECEIPT      "Receipt record not found"
+    IDS_GCI_TRS_CONVERTED_TO_PAP "Transaction converted to P@P"
+    IDS_GCI_UPDATE_OLA_MEM_INFO "Updated OLA info stored in RAM"
+    IDS_GCI_PUMP_IN_SELF_SERVICE "Pump is a self service pump"
+    IDS_GCI_PARALLEL_AVI_NOT_ALLOWED "Parallel AVIs not allowed"
+    IDS_GCI_OLA_NOT_ACTIVE  "OLA not active"
+    IDS_GCI_SERVICE_FEE_NOT_VALID "Service fee is not valid"
+    IDS_GCI_TRS_LOCKED      "Transaction locked by another POS"
+    IDS_GCI_TRS_NOT_FOR_SALE "Transaction not for sale"
+    IDS_GCI_TRS_NOT_RESERVED "Transaction not reserved"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_GCI_ONE_OF_PUMP_TRS_ON_OFFER 
+                            "One of the pump's transaction is on offer"
+    IDS_GCI_TRS_NOT_ACCEPTED "Transaction has not been accepted"
+    IDS_GCI_UNKNOWN_TRS_STATE "Transaction state unknown"
+    IDS_GCI_ALARM_SRV_NOT_ACTIVE "AlarmSrv not Active"
+    IDS_GCI_INIT_DEBIT_IN_PROCESS "Pump reserved for init debit"
+    IDS_GCI_SERVER_IN_MIDDLE_LOCK_SHIFT 
+                            "Server is in middle lock shift process"
+    IDS_GCI_OPEN_PREPAY_TRS "An open prepaid transaction exists"
+    IDS_GCI_OPEN_PAY_AT_KIOSK "An open P@K transaction exists"
+    IDS_GCI_OPEN_PAY_AT_PUMP "An open P@P transaction exists"
+    IDS_GCI_INVALID_DAY_OF_WEEK "Day of week is invalid"
+    IDS_GCI_PUMP_NOT_READY  "Pump is not ready"
+    IDS_GCI_SERVER_NOT_READY "Server not ready"
+    IDS_CGI_INVALID_LOCK_OPTION "Lock option is not valid"
+    IDS_GCI_IN_MIDDLE_OF_PROCESS "System in middle of process"
+    IDS_GCI_CONTROLLER_NOT_AVAILABLE "Controller/Convert Layer not available"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_GCI_CREATE_OLA_SESSION "Create OLA session"
+    IDS_GCI_SERVER_IN_THE_MIDDLE_OF_OLA_SESSION 
+                            "Can not execute - Server in the middle of OLA session"
+    IDS_GCI_NAK             "GCI NAK"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CTL_OK              "No error"
+    IDS_CTRL_INVALID_PUMP_NUMBER "Pump number not valid"
+    IDS_CTRL_INVALID_PUMP_MODE "Pump mode not valid"
+    IDS_CTRL_NOT_SUPPORTED  "Requested action/flag is not suported"
+    IDS_CTRL_INVALID_GRADE_NUMBER "Grade number is not valid"
+    IDS_CTRL_INVALID_DAYOFWEEK "Day of week is not valid"
+    IDS_CTRL_RECORD_NOT_FOUND "Record not found"
+    IDS_CTRL_FAILED_IO      "Bad method I/O"
+    IDS_CTRL_PUMP_NOT_IN_WORKING_STATE "Pump not working"
+    IDS_CTRL_OPEN_PRE_PAY_TRS "An open prepaid transaction exists"
+    IDS_CTRL_OPEN_PAY_AT_KIOSK_TRS "An open P@K transaction exists"
+    IDS_CTRL_OPEN_PAY_AT_PUMP_TRS "An open P@P transaction exists"
+    IDS_CTRL_IN_MIDDLE_OF_SHIFT "System is in the middle of a shift change"
+    IDS_CTRL_PUMP_NOT_READY "Pump not ready"
+    IDS_CTRL_TABLE_NAME_TOO_LONG "Table name too long"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CTRL_FIELD_NAME_TOO_LONG "Field name too long"
+    IDS_CTRL_DEFAULT_FIELD_VAL_TOO_LONG "Default value for field too long"
+    IDS_CTRL_FAILED_TO_OPEN_TABLE 
+                            "Could not open table/key, parameter set to default"
+    IDS_CTRL_PARAM_NOT_FOUND 
+                            "Could not find parameter, did not create new one"
+    IDS_CTRL_PARAM_NOT_FOUND_AND_CREATED 
+                            "Parameter not found, created with default value"
+    IDS_CTRL_PARAM_NOT_FOUND_FAILED_TO_CREATE 
+                            "Parmeter not found, failed to create, set value to default"
+    IDS_CTRL_INVALID_SCHEME_NUMBER "Mode scheme number not valid"
+    IDS_CTRL_MODE_NAME_TOO_LONG "Mode name too long"
+    IDS_CTRL_LAST_ERROR     "Log message contains last Windows system error"
+    IDS_CTRL_INVALID_SERVICE "Service number not valid"
+    IDS_CTRL_SERVICE_IN_MIDDLE_OF_OPERATION "Service in middle of operation"
+    IDS_CTRL_SERVER_NOT_READY "Server not ready"
+    IDS_CTRL_INVALID_LOCK_OPTION "Lock option is not valid"
+    IDS_CRL_IN_MIDDLE_OF_PROCESS "System in middle of process"
+    IDS_CRL_TRS_NOT_FOUND   "Transaction not found"
+    IDS_CTRL_INVALID_SERVICE_FEE_NUMBER "Service fee number not valid"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CTRL_INVALID_TANK_NUMBER "Tank number not valid"
+    IDS_CTRL_FORECOURT_EMERGENCY_LOCKED "Forecourt is Emergency Locked"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CTRL_CONTROLLER_NOT_AVAILABLE "Controller/Convert Layer not available"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CTRL_SERVICE_FEE_NOT_VALID "Service fee not valid"
+    IDS_CTRL_SERVER_IN_MIDDLE_SHIFT_LOCK 
+                            "Server in middle shift with lock process"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CTRL_ACCUMULATE_SHIFT_TOTAL_NOT_ACTIVE 
+                            "Accumulate shift total process not active"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_GCI_EVENT_OK        "No error"
+    IDS_GCI_EVENT_NAK       "Event was NACKED"
+    IDS_GCI_EVENT_NOT_SUPPORTED "Event not supported"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_NO_DESCRIPTION_AVAILABLE "(No error description available)"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_GPI_SERVER_IN_MIDDLE_LOCK_SHIFT 
+                            "Server is in middle lock shift process"
+    IDS_GPI_ALARMSRV_NOT_ACTIVE "AlarmSrv not Active."
+    IDS_GPI_ALARMSRV_FAIL_RETRIEVED_DATA 
+                            "Fail to retrieved  information from AlarmSrv"
+    IDS_GPI_INVALID_SCHEME_NUMBER "Mode scheme number not valid"
+    IDS_GPI_PUMP_STOPPED_BY_CONTROLLER 
+                            "The pump has been stopped by the controller"
+    IDS_GPI_PREPAY_REQUEST_PASSED_FORECOURT_LIMIT 
+                            "PrePay request passed the forecourt prepay limit."
+    IDS_GPI_CANT_RESERVEPUMP "Can't reserve pump"
+    IDS_GPI_ACCUMULATE_SHIFT_TOTAL_NOT_ACTIVE 
+                            "Accumulate shift total process not active"
+    IDS_GPI_RECORD_NOT_FOUND "Record not found"
+    IDS_GPI_CAR_WASH_IN_MIDDLE_OF_ANOTHER_SESSION 
+                            "Car wash session is already running, wait for session end."
+    IDS_GPI_PUMP_NOT_READY_FOR_MODE_CHANGE "Pump not ready for mode change"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_PUMP_SRV_STATUS_DISPENSING "DISPENSING"
+    IDS_PUMP_SRV_STATUS_STOPED_BY_OPERATOR "STOPED BY OPERATOR"
+    IDS_PUMP_SRV_STATUS_OUT_OF_SERVICE "OUT OF SERVICE"
+    IDS_PUMP_SRV_STATUS_NOZZLE_LEFT_OUT "NOZZLE LEFT OUT"
+    IDS_PUMP_SRV_STATUS_ERROR_TERMINATED "ERROR TERMINATED"
+    IDS_PUMP_SRV_STATUS_COMMS_TERMINATED "COMMS TERMINATED"
+    IDS_PUMP_SRV_STATUS_UNKNOWN_STATUS "UNKNOWN STATUS"
+    IDS_PUMP_SRV_STATUS_STOPPED_BY_CONTROLLER "STOPPED BY CONTROLLER"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_PUMP_SRV_STATUS_POWER_UP "POWER UP"
+    IDS_PUMP_SRV_STATUS_READY "READY"
+    IDS_PUMP_SRV_STATUS_REQUESTING "REQUESTING"
+    IDS_PUMP_SRV_STATUS_AUTHORIZED "AUTHORIZED"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_GCI_RES_EXT_MAINTENANCE "MAINTENANCE"
+    IDS_GCI_RES_EXT_PAP_CANCELED "PAP CANCELED"
+    IDS_GCI_RES_EXT_USER_MENU "USER MENU"
+    IDS_GCI_RES_EXT_ATTENDANT "ATTENDANT"
+    IDS_GCI_RES_EXT_UNKNOWN "UNKNOWN"
+    IDS_GCI_RES_EXT_RFID_CT_CANCELED "RFID CT CANCELED"
+    IDS_GCI_RES_EXT_RFID_HT_CANCELED "RFID HT CANCELED"
+    IDS_GCI_RES_EXT_CASH_ACCEPTOR "CASH ACCEPTOR"
+    IDS_GCI_RES_EXT_AVI_CANCELED "AVI CANCELED"
+    IDS_GCI_RES_EXT_SCANNER "SCANNER"
+    IDS_GCI_RES_EXT_PUMP_SINGLE_LOCK "PUMP SINGLE LOCK"
+    IDS_GCI_RES_EXT_PAK_AUTO_RECONCILE "PAK AUTO RECONCILE"
+    IDS_GCI_RES_EXT_FLEET   "FLEET"
+    IDS_GCI_RES_EXT_LOYALTY_AVI "LOYALTY AVI"
+    IDS_GCI_RES_EXT_AUTO_AUTH "AUTO AUTH"
+    IDS_GCI_RES_EXT_MAINTENANCE_DATABASE "MAINTENANCE DATABASE"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_GCI_RES_NULL_RES    "NULL RES"
+    IDS_GCI_RES_ATTEND      "ATTEND"
+    IDS_GCI_RES_TEST        "TEST"
+    IDS_GCI_RES_PAY_AT_PUMP "PAY AT PUMP"
+    IDS_GCI_RES_PAY_AT_KIOSK "PAY AT KIOSK"
+    IDS_GCI_RES_PAY_AT_OPT  "PAY AT OPT"
+    IDS_GCI_RES_PRE_PAY_AT_POS "PRE PAY AT POS"
+    IDS_GCI_RES_PUMPSRV     "PUMPSRV"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_GCI_RES_UNKNOWN_RES "UNKNOWN RES"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_GCI_RES_EXT_NULL    "NULL"
+    IDS_GCI_RES_EXT_AVI     "AVI"
+    IDS_GCI_RES_EXT_PRICE_CHANGE "PRICE CHANGE"
+    IDS_GCI_RES_EXT_SHIFT_CHANGE "SHIFT CHANGE"
+    IDS_GCI_RES_EXT_RFID_CT "RFID CT"
+    IDS_GCI_RES_EXT_RFID_HT "RFID HT"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_NO_CHANGE           "NO CHANGE"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_GCI_RES_EXT_PAP_EXTERNAL "PAP EXTERNAL"
+    IDS_GCI_RES_EXT_PAK_LOYALTY "PAK LOYALTY"
+    IDS_GCI_RES_EXT_PAK_CANCELED "PAK CANCELED"
+    IDS_GCI_RES_EXT_MOBILE  "RES_EXT_MOBILE"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Hebrew (Israel) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_HEB)
+LANGUAGE LANG_HEBREW, SUBLANG_DEFAULT
+#pragma code_page(1255)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_GPI                 REGISTRY                "GPI.rgs"
+
+IDR_GCI                 REGISTRY                "GCI.rgs"
+
+IDR_CTRL                REGISTRY                "Ctrl.rgs"
+
+#endif    // Hebrew (Israel) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "PumpSrv.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

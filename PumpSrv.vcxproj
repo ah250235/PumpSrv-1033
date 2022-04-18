@@ -1,0 +1,665 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <Keyword>AtlProj</Keyword>
+    <ProjectGuid>{8DCFFDD9-8427-EDE6-2822-367CE7A8373D}</ProjectGuid>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <UseOfAtl>Static</UseOfAtl>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <UseOfAtl>Static</UseOfAtl>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+    <LibraryPath>C:\Sources\1033\FuelCommon\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AdditionalIncludeDirectories>..\latestbuild;..\thirdparty;..\..\HydService\Source;..\FuelCommon;..\FuelDB;..\FuelMSSQLDB;..\thirdparty\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_WIN32_DCOM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\ReleaseMinDependency\PumpSrv.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x040d</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(Configuration)\$(TargetName).bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(SolutionDir)$(Configuration)\$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>..\..\FuelCommon\Release;%(AdditionalLibraryDirectories);$(SolutionDir)$(Configuration)\;..\ThirdParty</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Ws2_32.lib;odbc32.lib;odbccp32.lib;legacy_stdio_definitions.lib;;dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <ShowProgress>NotSet</ShowProgress>
+      <LinkStatus>false</LinkStatus>
+      <GenerateMapFile>true</GenerateMapFile>
+    </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+      <Message>
+      </Message>
+      <Outputs>
+      </Outputs>
+    </CustomBuildStep>
+    <PostBuildEvent>
+      <Command>"$(TargetPath)" /regserver
+echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg"
+echo Server registration done!</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Performing registration</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\latestbuild;..\thirdparty;..\..\HydService\Source;..\FuelCommon;..\FuelDB;..\FuelMSSQLDB;..\thirdparty\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_WIN32_DCOM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\PumpSrv.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x040d</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(Configuration)\$(TargetName).bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(SolutionDir)$(Configuration)\$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>..\..\FuelCommon\Debug;%(AdditionalLibraryDirectories);$(SolutionDir)$(Configuration)\;..\ThirdParty</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Ws2_32.lib;odbc32.lib;odbccp32.lib;dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <ShowProgress>NotSet</ShowProgress>
+      <LinkStatus>false</LinkStatus>
+    </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+      <Message>
+      </Message>
+      <Outputs>
+      </Outputs>
+    </CustomBuildStep>
+    <PostBuildEvent>
+      <Message>Performing registration</Message>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <CustomBuild>
+      <Command>
+      </Command>
+      <Outputs>
+      </Outputs>
+      <LinkObjects />
+      <TreatOutputAsContent />
+      <Message />
+    </CustomBuild>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\FuelCommon\ExtraFields.cpp" />
+    <ClCompile Include="AccountReceipt.cpp" />
+    <ClCompile Include="AccumulationShiftTotal.cpp" />
+    <ClCompile Include="AlarmConvert.cpp" />
+    <ClCompile Include="AlarmData.cpp" />
+    <ClCompile Include="AlarmSrv.cpp" />
+    <ClCompile Include="AlarmSrvPS.cpp" />
+    <ClCompile Include="AltrenateIDNMPDetails.cpp" />
+    <ClCompile Include="ApplyCalcDiscountNMPDetail.cpp" />
+    <ClCompile Include="AuthorizeCardNMP.cpp" />
+    <ClCompile Include="AuthorizeLoyaltyNMPDetails.cpp" />
+    <ClCompile Include="AuthorizePaymentNMPDetails.cpp" />
+    <ClCompile Include="BaseFlow.cpp" />
+    <ClCompile Include="BaseFuelingRestriction.cpp" />
+    <ClCompile Include="BaseReceipt.cpp" />
+    <ClCompile Include="BasicProtectData.cpp" />
+    <ClCompile Include="BuildLine2PosPump.cpp" />
+    <ClCompile Include="CandianTaxCalc.cpp" />
+    <ClCompile Include="CardDeclineNMPDetails.cpp" />
+    <ClCompile Include="CardSaleAllData.cpp" />
+    <ClCompile Include="CarWash.cpp" />
+    <ClCompile Include="CarWashDiscountNMPDetails.cpp" />
+    <ClCompile Include="CarWashSaleNMPDetalis.cpp" />
+    <ClCompile Include="CashAcceptor.cpp" />
+    <ClCompile Include="CashAcceptorFile.cpp" />
+    <ClCompile Include="CFGEventsHandler.cpp" />
+    <ClCompile Include="ChangeProductInTank.cpp" />
+    <ClCompile Include="CmdInfo.cpp" />
+    <ClCompile Include="CommonFunction.cpp" />
+    <ClCompile Include="CompChecker.cpp" />
+    <ClCompile Include="CompConnectivity.cpp" />
+    <ClCompile Include="ConfigurationThread.cpp" />
+    <ClCompile Include="CTendersCard.cpp" />
+    <ClCompile Include="Ctrl.cpp" />
+    <ClCompile Include="DataExport.cpp" />
+    <ClCompile Include="DB.cpp" />
+    <ClCompile Include="DebitInfo.cpp" />
+    <ClCompile Include="DelayedPrePay.cpp" />
+    <ClCompile Include="DeliveryEmulationSingleTankServerInfo.cpp" />
+    <ClCompile Include="DeviceRecord.cpp" />
+    <ClCompile Include="DynamicPapFlow.cpp" />
+    <ClCompile Include="EmeraldLoyaltyCommandExecuter.cpp" />
+    <ClCompile Include="EpsilonLoyaltyCommandExecuter.cpp" />
+    <ClCompile Include="EventManager.cpp" />
+    <ClCompile Include="ExceptionHandler.cpp" />
+    <ClCompile Include="ExtendedGradeMap.cpp" />
+    <ClCompile Include="FleetCard.cpp" />
+    <ClCompile Include="FlowControlManager.cpp" />
+    <ClCompile Include="FlowRate.cpp" />
+    <ClCompile Include="ForecourtFuelingRestriction.cpp" />
+    <ClCompile Include="ForecourtProductList.cpp" />
+    <ClCompile Include="FuelingNMPDetails.cpp" />
+    <ClCompile Include="FuelingRestriction.cpp" />
+    <ClCompile Include="FuelLoyaltyHelper.cpp" />
+    <ClCompile Include="FuelMobileSrvThread.cpp" />
+    <ClCompile Include="GAIEventsHandler.cpp" />
+    <ClCompile Include="GCI.cpp" />
+    <ClCompile Include="GetMemberInfoNmpDetalis.cpp" />
+    <ClCompile Include="GLIEventsHandler.cpp" />
+    <ClCompile Include="GPI.cpp" />
+    <ClCompile Include="GPIEventManager.cpp" />
+    <ClCompile Include="Grade.cpp" />
+    <ClCompile Include="GradeData.cpp" />
+    <ClCompile Include="Hydra.cpp" />
+    <ClCompile Include="HydraPS.cpp" />
+    <ClCompile Include="IniFile.cpp" />
+    <ClCompile Include="InitDebitHandler.cpp" />
+    <ClCompile Include="Log.cpp" />
+    <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="LoyaltyNMPDetails.cpp" />
+    <ClCompile Include="ManualLoyaltyNMPDetails.cpp" />
+    <ClCompile Include="MethodOfPaymentNMPDetails.cpp" />
+    <ClCompile Include="MutipleTaxCalculator.cpp" />
+    <ClCompile Include="NMPFactory.cpp" />
+    <ClCompile Include="OLAEpsilon.cpp" />
+    <ClCompile Include="OLAEpsilonDiscount.cpp" />
+    <ClCompile Include="OLAParam.cpp" />
+    <ClCompile Include="OLAPumpServiceMode.cpp" />
+    <ClCompile Include="PakFlow.cpp" />
+    <ClCompile Include="PapFlow.cpp" />
+    <ClCompile Include="Param.cpp" />
+    <ClCompile Include="ParitalApproveNMPDetalis.cpp" />
+    <ClCompile Include="POSFuelingRestriction.cpp" />
+    <ClCompile Include="PosInfo.cpp" />
+    <ClCompile Include="PreAuthorizeScreen.cpp" />
+    <ClCompile Include="PriceChangeFlags.cpp" />
+    <ClCompile Include="PriceChangeWithAckPerPump.cpp" />
+    <ClCompile Include="Promotion.cpp" />
+    <ClCompile Include="PromptNMPDetails.cpp" />
+    <ClCompile Include="ProtectedDataHandler.cpp" />
+    <ClCompile Include="ProtectedReceipt.cpp" />
+    <ClCompile Include="Pump.cpp" />
+    <ClCompile Include="PumpLock.cpp" />
+    <ClCompile Include="PumpLockbyTank.cpp" />
+    <ClCompile Include="PumpSrv.cpp" />
+    <ClCompile Include="PumpSrvDatabase.cpp" />
+    <ClCompile Include="PumpSrvDatabaseLogger.cpp" />
+    <ClCompile Include="PumpSrvDB.cpp" />
+    <ClCompile Include="PumpTotalsXml.cpp" />
+    <ClCompile Include="QDXMaintThread.cpp" />
+    <ClCompile Include="QLogger.cpp" />
+    <ClCompile Include="ReceiptExtraIndexFile.cpp" />
+    <ClCompile Include="RunQueryNMPDetails.cpp" />
+    <ClCompile Include="SQLAlarmFile.cpp" />
+    <ClCompile Include="SQLAsh2000.cpp" />
+    <ClCompile Include="SQLCarWashFile.cpp" />
+    <ClCompile Include="SQLItemsFile.cpp" />
+    <ClCompile Include="SQLItemsInfoTest.cpp" />
+    <ClCompile Include="SQLOLATempTrs.cpp" />
+    <ClCompile Include="SQLOLATrs.cpp" />
+    <ClCompile Include="SQLPaidTrsFile.cpp" />
+    <ClCompile Include="SQLPumpSrvReceiptExtraInfoDB.cpp" />
+    <ClCompile Include="SQLPumpSrvSingleShiftAccumulation.cpp" />
+    <ClCompile Include="SQLReceiptDB.cpp" />
+    <ClCompile Include="RegTable.cpp" />
+    <ClCompile Include="RelativeDoubleRecord.cpp" />
+    <ClCompile Include="Report.cpp" />
+    <ClCompile Include="ReportGenerator.cpp" />
+    <ClCompile Include="RTEventsHandler.cpp" />
+    <ClCompile Include="RTIEventsHandler.cpp" />
+    <ClCompile Include="ServerInfo.cpp" />
+    <ClCompile Include="ServerMain.cpp" />
+    <ClCompile Include="ShiftDelivery.cpp" />
+    <ClCompile Include="ShiftProcess.cpp" />
+    <ClCompile Include="ShiftTanks.cpp" />
+    <ClCompile Include="ShiftTotals.cpp" />
+    <ClCompile Include="SinglePumpLock.cpp" />
+    <ClCompile Include="SingleShiftAccumMgr.cpp" />
+    <ClCompile Include="SingleShiftAccumulations.cpp" />
+    <ClCompile Include="SiteConfigurationExporter.cpp" />
+    <ClCompile Include="SQLExtraInfoFile.cpp" />
+    <ClCompile Include="SQLFuelDeliveriesFile.cpp" />
+    <ClCompile Include="SQLPumpSrvFile.cpp" />
+    <ClCompile Include="SQLPrePayFile.cpp" />
+    <ClCompile Include="SQLPumpTotalsFile.cpp" />
+    <ClCompile Include="SQLTankGauge.cpp" />
+    <ClCompile Include="SQLTankReadsFile.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="StoreLineOLA.cpp" />
+    <ClCompile Include="SwipeCardNMPDetalis.cpp" />
+    <ClCompile Include="SwipePaymentNMPDetails.cpp" />
+    <ClCompile Include="Tank.cpp" />
+    <ClCompile Include="TankGaugeFactor.cpp" />
+    <ClCompile Include="TankLevelProtection.cpp" />
+    <ClCompile Include="TankXML.cpp" />
+    <ClCompile Include="TargetMessageNMPDetails.cpp" />
+    <ClCompile Include="TaxCalc.cpp" />
+    <ClCompile Include="TerminalMessages.cpp" />
+    <ClCompile Include="TicketPromotion.cpp" />
+    <ClCompile Include="TimeOutManager.cpp" />
+    <ClCompile Include="TotalPumpInfo.cpp" />
+    <ClCompile Include="Track2Receipt.cpp" />
+    <ClCompile Include="TreeFlowChart.cpp" />
+    <ClCompile Include="TrsLog.cpp" />
+    <ClCompile Include="WetStockDetails.cpp" />
+    <ClCompile Include="XmlConvertor.cpp" />
+    <ClCompile Include="XmlConvertorEx.cpp" />
+    <ClCompile Include="XmlParser.cpp" />
+    <ClCompile Include="DSSBothAlg.cpp" />
+    <ClCompile Include="DSSBothAsymmetricAlg.cpp" />
+    <ClCompile Include="DSSEncodeHandler.cpp" />
+    <ClCompile Include="DSSEncryptAlg.cpp" />
+    <ClCompile Include="DSSHashAlg.cpp" />
+    <ClCompile Include="DPSEncryptAlg.cpp" />
+    <ClCompile Include="BaseEncodeHandler.cpp" />
+    <ClCompile Include="BaseEncodingAlg.cpp" />
+    <ClCompile Include="PCIEncodeHandler.cpp" />
+    <ClCompile Include="ola32.cpp" />
+    <ClCompile Include="OLA32Events.cpp" />
+    <ClCompile Include="OLA32EventSrv.cpp" />
+    <ClCompile Include="OLA32Srv.cpp" />
+    <ClCompile Include="OLABase.cpp" />
+    <ClCompile Include="OLAConnectedPayments.cpp" />
+    <ClCompile Include="OLADotNet.cpp" />
+    <ClCompile Include="OLAEps.cpp" />
+    <ClCompile Include="OLAEserviceSrv.cpp" />
+    <ClCompile Include="OLAEvents.cpp" />
+    <ClCompile Include="OLAHashAlg.cpp" />
+    <ClCompile Include="OLAPositive_FIPAYSrv.cpp" />
+    <ClCompile Include="OLAPositiveEventSrv.cpp" />
+    <ClCompile Include="OLAPositiveIFSF.cpp" />
+    <ClCompile Include="OLAPositiveSrv.cpp" />
+    <ClCompile Include="OLAPositiveUS.cpp" />
+    <ClCompile Include="OLAProgressSrv.cpp" />
+    <ClCompile Include="OLAProgressSrvEx.cpp" />
+    <ClCompile Include="OLARouteSrv.cpp" />
+    <ClCompile Include="OLAService2EventsHandler.cpp" />
+    <ClCompile Include="OLASimLinkSrv.cpp" />
+    <ClCompile Include="OlaSimulator.cpp" />
+    <ClCompile Include="OLASkeleton.cpp" />
+    <ClCompile Include="OLATcpBase.cpp" />
+    <ClCompile Include="OLATcpPositiveSrv.cpp" />
+    <ClCompile Include="OlaTravelCenter.cpp" />
+    <ClCompile Include="ConvertXML.cpp" />
+    <ClCompile Include="VpMng.cpp" />
+    <ClCompile Include="VPThread.cpp" />
+    <ClCompile Include="DeferralDiscountNMPDetails.cpp" />
+    <ClCompile Include="NmpDetalis.cpp" />
+    <ClCompile Include="phoneLoopUpNmpDetalis.cpp" />
+    <ClCompile Include="CommandExecuter.cpp" />
+    <ClCompile Include="CopientCommandExecuter.cpp" />
+    <ClCompile Include="FuelLoyaltyPSR.cpp" />
+    <ClCompile Include="LoyaltyCommandExecuter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="PumpSrv.idl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">midl /Oicf /h "PumpSrv.h" /iid "PumpSrv_i.c" "PumpSrv.idl"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing MIDL step</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\PumpSrv.tlb;.\PumpSrv.h;.\PumpSrv_i.c;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">midl /Oicf /h "PumpSrv.h" /iid "PumpSrv_i.c" "PumpSrv.idl"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing MIDL step</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\PumpSrv.tlb;.\PumpSrv.h;.\PumpSrv_i.c;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PumpSrv.rc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\FuelCommon\ExtraFields.h" />
+    <ClInclude Include="AccountReceipt.h" />
+    <ClInclude Include="AccumulationShiftTotal.h" />
+    <ClInclude Include="AlarmConvert.h" />
+    <ClInclude Include="AlarmData.h" />
+    <ClInclude Include="AlarmSrv.h" />
+    <ClInclude Include="AlarmSrvPS.h" />
+    <ClInclude Include="AltrenateIDNMPDetails.h" />
+    <ClInclude Include="ApplyCalcDiscountNMPDetail.h" />
+    <ClInclude Include="AuthorizeCardNMP.h" />
+    <ClInclude Include="AuthorizeLoyaltyNMPDetails.h" />
+    <ClInclude Include="AuthorizePaymentNMPDetails.h" />
+    <ClInclude Include="BaseEncodeHandler.h" />
+    <ClInclude Include="BaseEncodingAlg.h" />
+    <ClInclude Include="BaseFlow.h" />
+    <ClInclude Include="BaseFuelingRestriction.h" />
+    <ClInclude Include="BaseReceipt.h" />
+    <ClInclude Include="BasicProtectData.h" />
+    <ClInclude Include="BuildLine2PosPump.h" />
+    <ClInclude Include="CandianTaxCalc.h" />
+    <ClInclude Include="CardDeclineNMPDetails.h" />
+    <ClInclude Include="CardSaleAllData.h" />
+    <ClInclude Include="CarWash.h" />
+    <ClInclude Include="CarWashDiscountNMPDetails.h" />
+    <ClInclude Include="CarWashSaleNMPDetalis.h" />
+    <ClInclude Include="CashAcceptor.h" />
+    <ClInclude Include="CashAcceptorFile.h" />
+    <ClInclude Include="CFGEventsHandler.h" />
+    <ClInclude Include="ChangeProductInTank.h" />
+    <ClInclude Include="CmdInfo.h" />
+    <ClInclude Include="commonDef.h" />
+    <ClInclude Include="CommonFunction.h" />
+    <ClInclude Include="CommonStruct.h" />
+    <ClInclude Include="CompChecker.h" />
+    <ClInclude Include="CompConnectivity.h" />
+    <ClInclude Include="ConfigurationThread.h" />
+    <ClInclude Include="CTendersCard.h" />
+    <ClInclude Include="Ctrl.h" />
+    <ClInclude Include="DataExport.h" />
+    <ClInclude Include="DB.h" />
+    <ClInclude Include="DebitInfo.h" />
+    <ClInclude Include="DelayedPrePay.h" />
+    <ClInclude Include="DeliveryEmulationSingleTankServerInfo.h" />
+    <ClInclude Include="DeviceRecord.h" />
+    <ClInclude Include="DynamicPapFlow.h" />
+    <ClInclude Include="EmeraldLoyaltyCommandExecuter.h" />
+    <ClInclude Include="EpsilonLoyaltyCommandExecuter.h" />
+    <ClInclude Include="EventManager.h" />
+    <ClInclude Include="ExceptionHandler.h" />
+    <ClInclude Include="ExceptionHandlerMsg.h" />
+    <ClInclude Include="ExtendedGradeMap.h" />
+    <ClInclude Include="FleetCard.h" />
+    <ClInclude Include="FlowControlManager.h" />
+    <ClInclude Include="FlowRate.h" />
+    <ClInclude Include="ForecourtFuelingRestriction.h" />
+    <ClInclude Include="ForecourtProductList.h" />
+    <ClInclude Include="FuelingNMPDetails.h" />
+    <ClInclude Include="FuelingRestriction.h" />
+    <ClInclude Include="FuelLoyaltyHelper.h" />
+    <ClInclude Include="FuelMobileSrvThread.h" />
+    <ClInclude Include="GAIEventsHandler.h" />
+    <ClInclude Include="GCI.h" />
+    <ClInclude Include="GetMemberInfoNmpDetalis.h" />
+    <ClInclude Include="GLIEventsHandler.h" />
+    <ClInclude Include="GPI.h" />
+    <ClInclude Include="GPIEventManager.h" />
+    <ClInclude Include="Grade.h" />
+    <ClInclude Include="GradeData.h" />
+    <ClInclude Include="Hydra.h" />
+    <ClInclude Include="HydraPS.h" />
+    <ClInclude Include="IniFile.h" />
+    <ClInclude Include="InitDebitHandler.h" />
+    <ClInclude Include="Log.h" />
+    <ClInclude Include="Logger.h" />
+    <ClInclude Include="LoyaltyNMPDetails.h" />
+    <ClInclude Include="ManualLoyaltyNMPDetails.h" />
+    <ClInclude Include="MethodOfPaymentNMPDetails.h" />
+    <ClInclude Include="MutipleTaxCalculator.h" />
+    <ClInclude Include="NMPFactory.h" />
+    <ClInclude Include="OLAEpsilon.h" />
+    <ClInclude Include="OLAEpsilonDiscount.h" />
+    <ClInclude Include="OLAParam.h" />
+    <ClInclude Include="OLAPumpServiceMode.h" />
+    <ClInclude Include="PakFlow.h" />
+    <ClInclude Include="PapFlow.h" />
+    <ClInclude Include="Param.h" />
+    <ClInclude Include="ParitalApproveNMPDetalis.h" />
+    <ClInclude Include="POSFuelingRestriction.h" />
+    <ClInclude Include="PosInfo.h" />
+    <ClInclude Include="PreAuthorizeScreen.h" />
+    <ClInclude Include="PriceChangeFlags.h" />
+    <ClInclude Include="PriceChangeWithAckPerPump.h" />
+    <ClInclude Include="ProjectRemark.h" />
+    <ClInclude Include="Promotion.h" />
+    <ClInclude Include="PromptNMPDetails.h" />
+    <ClInclude Include="ProtectedDataHandler.h" />
+    <ClInclude Include="ProtectedReceipt.h" />
+    <ClInclude Include="Pump.h" />
+    <ClInclude Include="PumpClass.h" />
+    <ClInclude Include="PumpLock.h" />
+    <ClInclude Include="PumpLockByTank.h" />
+    <ClInclude Include="PumpSrv.h" />
+    <ClInclude Include="PumpSrvCP.h" />
+    <ClInclude Include="PumpSrvDatabase.h" />
+    <ClInclude Include="PumpSrvDatabaseLogger.h" />
+    <ClInclude Include="PumpSrvDB.h" />
+    <ClInclude Include="PumpTotalsXml.h" />
+    <ClInclude Include="Q-DEX.H" />
+    <ClInclude Include="QDXMaintThread.h" />
+    <ClInclude Include="QLogger.h" />
+    <ClInclude Include="Queue.h" />
+    <ClInclude Include="ReceiptExtraIndexFile.h" />
+    <ClInclude Include="RunQueryNMPDetails.h" />
+    <ClInclude Include="SQLAlarmFile.h" />
+    <ClInclude Include="SQLAsh2000.h" />
+    <ClInclude Include="SQLCarWashFile.h" />
+    <ClInclude Include="SQLItemsFile.h" />
+    <ClInclude Include="SQLItemsInfoTest.h" />
+    <ClInclude Include="SQLOLATempTrs.h" />
+    <ClInclude Include="SQLPaidTrsFile.h" />
+    <ClInclude Include="SQLPumpSrvReceiptExtraInfoDB.h" />
+    <ClInclude Include="SQLPumpSrvSingleShiftAccumulation.h" />
+    <ClInclude Include="SQLReceiptDB.h" />
+    <ClInclude Include="RegTable.h" />
+    <ClInclude Include="RelativeDoubleRecord.h" />
+    <ClInclude Include="Report.h" />
+    <ClInclude Include="ReportGenerator.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="RTEventsHandler.h" />
+    <ClInclude Include="RTIEventsHandler.h" />
+    <ClInclude Include="ServerInfo.h" />
+    <ClInclude Include="ServerMain.h" />
+    <ClInclude Include="ShiftDelivery.h" />
+    <ClInclude Include="ShiftProcess.h" />
+    <ClInclude Include="ShiftTanks.h" />
+    <ClInclude Include="ShiftTotals.h" />
+    <ClInclude Include="SinglePumpLock.h" />
+    <ClInclude Include="SingleShiftAccumMgr.h" />
+    <ClInclude Include="SingleShiftAccumulations.h" />
+    <ClInclude Include="SiteConfigurationExporter.h" />
+    <ClInclude Include="SQLExtraInfoFile.h" />
+    <ClInclude Include="SQLFuelDeliveriesFile.h" />
+    <ClInclude Include="SQLPumpSrvFile.h" />
+    <ClInclude Include="SQLPrePayFile.h" />
+    <ClInclude Include="SQLPumpTotalsFile.h" />
+    <ClInclude Include="SQLTankGauge.h" />
+    <ClInclude Include="SQLTankReadsFile.h" />
+    <ClInclude Include="StaticString.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="StoreLineOLA.h" />
+    <ClInclude Include="SwipeCardNMPDetalis.h" />
+    <ClInclude Include="SwipePaymentNMPDetails.h" />
+    <ClInclude Include="Tank.h" />
+    <ClInclude Include="TankGaugeFactor.h" />
+    <ClInclude Include="TankLevelProtection.h" />
+    <ClInclude Include="TankXML.h" />
+    <ClInclude Include="TargetMessageNMPDetails.h" />
+    <ClInclude Include="TaxCalc.h" />
+    <ClInclude Include="TerminalMessages.h" />
+    <ClInclude Include="TicketPromotion.h" />
+    <ClInclude Include="TimeOutManager.h" />
+    <ClInclude Include="TotalPumpInfo.h" />
+    <ClInclude Include="Track2Receipt.h" />
+    <ClInclude Include="TreeFlowChart.h" />
+    <ClInclude Include="TrsLog.h" />
+    <ClInclude Include="WetStockDetails.h" />
+    <ClInclude Include="XmlConvertor.h" />
+    <ClInclude Include="XmlConvertorEx.h" />
+    <ClInclude Include="XmlDefinitions.h" />
+    <ClInclude Include="XmlParser.h" />
+    <ClInclude Include="DSSBothAlg.h" />
+    <ClInclude Include="DSSBothAsymmetricAlg.h" />
+    <ClInclude Include="DSSEncodeHandler.h" />
+    <ClInclude Include="DSSEncryptAlg.h" />
+    <ClInclude Include="DSSHashAlg.h" />
+    <ClInclude Include="DPSEncryptAlg.h" />
+    <ClInclude Include="PCIEncodeHandler.h" />
+    <ClInclude Include="OLA.h" />
+    <ClInclude Include="ola32.h" />
+    <ClInclude Include="OLA32Events.h" />
+    <ClInclude Include="OLA32EventSrv.h" />
+    <ClInclude Include="OLA32Srv.h" />
+    <ClInclude Include="OLABase.h" />
+    <ClInclude Include="OLAConnectedPayments.h" />
+    <ClInclude Include="OLADotNet.h" />
+    <ClInclude Include="OLAEps.h" />
+    <ClInclude Include="OLAEserviceSrv.h" />
+    <ClInclude Include="OLAEvents.h" />
+    <ClInclude Include="OLAHashAlg.h" />
+    <ClInclude Include="OLAPositive_FIPAYSrv.h" />
+    <ClInclude Include="OLAPositiveEventSrv.h" />
+    <ClInclude Include="OLAPositiveIFSF.h" />
+    <ClInclude Include="OLAPositiveSrv.h" />
+    <ClInclude Include="OLAPositiveUS.h" />
+    <ClInclude Include="OLAProgressSrv.h" />
+    <ClInclude Include="OLAProgressSrvEx.h" />
+    <ClInclude Include="OLARouteSrv.h" />
+    <ClInclude Include="OLAService2EventsHandler.h" />
+    <ClInclude Include="OLASimLinkSrv.h" />
+    <ClInclude Include="OlaSimulator.h" />
+    <ClInclude Include="OLASkeleton.h" />
+    <ClInclude Include="OLATcpBase.h" />
+    <ClInclude Include="OLATcpPositiveSrv.h" />
+    <ClInclude Include="OlaTravelCenter.h" />
+    <ClInclude Include="ConvertXML.h" />
+    <ClInclude Include="VpMng.h" />
+    <ClInclude Include="VPThread.h" />
+    <ClInclude Include="DeferralDiscountNMPDetails.h" />
+    <ClInclude Include="NmpDetalis.h" />
+    <ClInclude Include="phoneLookUpNmpDetalis.h" />
+    <ClInclude Include="CommandExecuter.h" />
+    <ClInclude Include="CopientCommandExecuter.h" />
+    <ClInclude Include="FuelLoyaltyPSR.h" />
+    <ClInclude Include="LoyaltyCommandExecuter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Ctrl.rgs" />
+    <CustomBuild Include="cursor1.cur" />
+    <CustomBuild Include="GCI.rgs" />
+    <CustomBuild Include="GPI.rgs" />
+    <CustomBuild Include="PumpSrv.rgs" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

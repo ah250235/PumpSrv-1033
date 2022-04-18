@@ -1,0 +1,498 @@
+// PumpSrv.idl : IDL source for PumpSrv.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (PumpSrv.tlb) and marshalling code.
+
+#if (__midl >= 501)
+midl_pragma warning( disable: 2362 )
+#endif
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+	[
+		object,
+		uuid(7C9373A1-1D37-11D1-B8A5-0000E8D0CBF8),
+		dual,
+		helpstring("IGPI Interface"),
+		pointer_default(unique)
+	]
+	interface IGPI : IDispatch
+	{
+		[id(1), helpstring("method InitInterface")] HRESULT InitInterface([in] long lPosNumber, [in] long lVersion, [out , retval] long *pVal);
+		[id(2), helpstring("method GetServerState")] HRESULT GetServerState([out , retval] long *pVal);
+		[id(3), helpstring("method GetNumberOfPumps")] HRESULT GetNumberOfPumps([out , retval] long *pVal);
+		[id(4), helpstring("method GetPumpInfo")] HRESULT GetPumpInfo([in] long lPumpNumber, [out] BSTR *pRec,[out , retval] long *pVal );
+		[id(5), helpstring("method GetPumpStatus")] HRESULT GetPumpStatus([in] long lPumpNumber, [out] BSTR *pRec,[out , retval] long *pVal);
+		[id(6), helpstring("method GetPumpTransact")] HRESULT GetPumpTransact([in] long lPumpNumber, [in] long lTrsNumber ,[out] BSTR *pRec, [out , retval] long *pVal);
+		[id(7), helpstring("method GetMinimalPumpsInfo")] HRESULT GetMinimalPumpsInfo([out] BSTR *pRec,[out , retval] long *pVal);
+		[id(8), helpstring("method SetTrsState")] HRESULT SetTrsState([in] long lPumpNumber, [in] long lTrsNumber, [in] long lState, [out , retval] long *pVal);
+		[id(9), helpstring("method AuthorizePump")] HRESULT AuthorizePump([in] long lPumpNumber,[in] short nLevel,[in] long lGradePrice, [out,retval] long * pVal);
+		[id(10), helpstring("method StopPump")] HRESULT StopPump([in] long lPumpNumber, [out,retval] long *pVal);
+		[id(11), helpstring("method RestartPump")] HRESULT RestartPump([in] long lPumpNumber, [out,retval] long *pVal);
+		[id(12), helpstring("method AuthorizeAndLimit")] HRESULT AuthorizeAndLimit([in] long lPumpNumber, [in] short nLevel, [in] long lGradePrice, [in] long lMaxValue, [in] long lMaxVolume, [in] short nFlags, [in,out] long *lSyncNumber, [out,retval] long *pVal);
+		[id(13), helpstring("method ReservePump")] HRESULT ReservePump([in] long lPumpNumber, [in] long lSyncNumber, [out,retval] long *pVal);
+		[id(14), helpstring("method UnReservePump")] HRESULT UnReservePump([in] long lPumpNumber, [in] long lSyncNumber, [in] BOOL bForceRelease, [in] long lByDevice, [out,retval] long *pVal);
+		[id(15), helpstring("method GetPAPTrs")] HRESULT GetPAPTrs([in] long lPumpNumber, [out] BSTR *pRec, [out,retval] long *pVal);
+		[id(16), helpstring("method RemovePAPTrs")] HRESULT RemovePAPTrs([in] long lPumpNumber, [in] long lSeqNumber, [out,retval] long *pVal);
+		[id(17), helpstring("method GetPrePaidTrs")] HRESULT GetPrePaidTrs([in] long lPumpNumber, [in] long lSyncNumber, [in] short nFlags,[out] BSTR *pRec, [out,retval] long *pVal);
+		[id(18), helpstring("method RemovePrePaidTrs")] HRESULT RemovePrePaidTrs([in] long lPumpNumber, [in] long lSyncNumber, [out,retval] long *pVal);
+		[id(19), helpstring("method GetMinimalPumpsInfo2")] HRESULT GetMinimalPumpsInfo2([out] BSTR * pRec, [out,retval] long * pVal);
+		[id(20), helpstring("method InitInterface2")] HRESULT InitInterface2([in] long lPosNumber,[in] long lVersion,[in] long lFlags1,[in] long lFlags2,[in] long lFlags3, [out,retval] long * pVal);
+		[id(21), helpstring("method SetPumpMode")] HRESULT SetPumpMode([in] long lPumpNumber, [in] long lMode, [out, retval] long *pVal);
+		[id(22), helpstring("method GetPumpTransact2")] HRESULT GetPumpTransact2([in] long lPumpNumber, [in] long lTrsNumber , [out] BSTR *pRec,  [out,retval] long *pVal);
+		[id(23), helpstring("method GetPumpInfo2")] HRESULT GetPumpInfo2([in] long lPumpNumber, [out] BSTR *pRec,[out , retval] long *pVal);
+		[id(24), helpstring("method GetPrePaidTrs2")] HRESULT GetPrePaidTrs2([in] long lPumpNumber, [in] long lSyncNumber, [in] short nFlags,[out] BSTR *pRec, [out,retval] long *pVal);
+		[id(25), helpstring("method GetPAPTrs2")] HRESULT GetPAPTrs2([in] long lPumpNumber, [out] BSTR *pRec, [out,retval] long *pVal);
+		[id(26), helpstring("method GetPumpStatus2")] HRESULT GetPumpStatus2([in] long lPumpNumber, [out] BSTR * pRec, [out,retval] long *pVal);
+		[id(27), helpstring("method GetParam")] HRESULT GetParam([in] BSTR sTableAndFieldName,[in]  long lKey1,[in] long lKey2, [in] short nFiledType, [out] BSTR *sVal, [out] long *lVal, [out,retval] long * pVal);
+		[id(28), helpstring("method QueryPAPTrs")] HRESULT QueryPAPTrs([in] long lPumpNumber, [in] long lIndexNumber, [in] short nFlags, [out] BSTR *pRec, [out,retval] long *pVal);
+		[id(29), helpstring("method QueryPrePaidTrs")] HRESULT QueryPrePaidTrs([in] long lPumpNumber, [in] long lIndexNumber, [in] short nFlags, [out] BSTR *pRec, [out,retval] long *pVal);
+		[id(30), helpstring("method SetProcess")] HRESULT SetProcess([in] long lProcessNumber, [in] long lParam1, [in] long lParam2, [out,retval] long * pVal);
+		[id(31), helpstring("method GetProcess")] HRESULT GetProcess([in] long lProcessNumber, [out] long *plParam1, [out] long *plParam2, [out,retval] long * pVal);
+		[id(32), helpstring("method GetParam2")] HRESULT GetParam2([in,out] BSTR *sTableFieldAndVal,[in] long lKey1,[in] long lKey2,[in] short nFiledType,[out] long *lVal, [out,retval] long *pVal);
+		[id(33), helpstring("method GenerateWashCode")] HRESULT GenerateWashCode([in] long lDevice,  [in] long lWashProgram, [in] long lFlags, [out] long *lSyncNumber, [out, retval] long *pVal);
+		[id(34), helpstring("method GetWashCode")] HRESULT GetWashCode([in] long lSyncNumber, [out] long *lResult, [out] BSTR *sData, [in,out] long *lFlags, [out, retval] long *pVal);
+		[id(35), helpstring("method CancelWashCode")] HRESULT CancelWashCode([in] long lSyncNumber ,[in] long lDevice, [in] long lFlags, [in] BSTR sData, [out, retval] long *pVal);
+		[id(36), helpstring("method AuthorizePump2")] HRESULT AuthorizePump2([in] long lPumpNumber,[in] short nLevel,[in] long lGradePrice,[in] short nFlags, [in] long lLimit, [in] short nGroup, [out,retval] long * pVal);
+		[id(37), helpstring("method StopPump2")] HRESULT StopPump2([in] long lPumpNumber,[in] short nGroup,[out, retval] long * pVal);
+		[id(38), helpstring("method GetPAPTrs3")] HRESULT GetPAPTrs3([in] long lPumpNumber, [out]  BSTR *pRec,  [out,retval]  long *pVal);
+		[id(39), helpstring("method QueryPAPTrs2")] HRESULT QueryPAPTrs2([in] long lPumpNumber, [in] long lIndexNumber, [in] short nFlags, [out] BSTR *pRec, [out,retval] long *pVal);
+		[id(40), helpstring("method GetReceipt")] HRESULT GetReceipt([in]long lPumpNumber, [in] BSTR sTrack2, [in] short nIndex, [out] BSTR *sReceiptData, [in] long lFlags, [out, retval] long *pVal);
+		[id(41), helpstring("method ReceiptPrinted")] HRESULT ReceiptPrinted([in] BSTR sTrack2, [in] short nIndex ,[out, retval]  long  *pVal);
+		[id(42), helpstring("method GetOLAMemInfo")] HRESULT GetOLAMemInfo([in] long lPumpNumber , [in]short nIndex ,[in] long lFlags, [out] BSTR *pRec, [out,retval] long *Pval);
+		[id(43), helpstring("method GetPumpInfo3")] HRESULT GetPumpInfo3([in] long lPumpNumber, [out] BSTR *pRec, [in] long lFlags, [out , retval] long *pVal);
+		[id(44), helpstring("method GetServiceFee")] HRESULT GetServiceFee([in] long lPump, [in] long lTrsType, [in] long lTrsNumber,[in] BSTR stTime, [in] long lFlags, [out] long* pValue,    [out, retval] long  *pRetVal);
+		[id(45), helpstring("method GetMinimalPumpsInfo3")] HRESULT GetMinimalPumpsInfo3([out] BSTR * pRec,  [in] long lFlags, [out,retval] long * pVal);
+		[id(46), helpstring("method GetGradePrices")] HRESULT GetGradePrices([in] short nGrade, [in] long lFlags, [out] long *lCashFullPrice, [out] long *lCashSelfPrice, [out] long *lCreditFullPrice, [out] long *lCreditSelfPrice, [out , retval] long *pVal);
+		[id(47), helpstring("method GetLevelPrice")] HRESULT GetLevelPrice([in] long lPumpNumber, [in] short nGrade, [in] short nLevel, [in] long lServiceMode, [in] long lFlags, [out] long *lPrice, [out , retval] long *pVal);
+		[id(48), helpstring("method GetOLAMemInfo2")] HRESULT GetOLAMemInfo2([in] long lPumpNumber , [in,out] short *nIndex , [in]  long lFlags, [in] long lVal,[in] BSTR sVal, [out]  BSTR *pRec, [out,retval] long  *pVal);
+		[id(49), helpstring("method SetMemOla")] HRESULT SetMemOla([in] long lPump , [in] long lTrsNumber , [in] long lFlags, [in] long lVal , [out,retval] long  *pVal);
+		[id(50), helpstring("method GetOlaMemInfoStatus")] HRESULT GetOlaMemInfoStatus([in] long lFlags , [out] BSTR * pRec, [out, retval] long *pVal);
+		[id(51), helpstring("method GetTankInfo")] HRESULT GetTankInfo([in] long lTankNumber,[out] BSTR  *pRec, [in] long lFlags, [retval][out] long *pVal);
+		[id(52), helpstring("method SetTransactionState")] HRESULT SetTransactionState([in] long lPumpNumber , [in] BSTR pRec ,[in]long lFlags , [out , retval] long *pVal);
+		[id(53), helpstring("method GetStationStatus")] HRESULT GetStationStatus([in , out] long * lPumpMap1 , [in , out] long * lPumpMap2 , [in] long lFlags , [out , retval] long * pRetVal);
+		[id(54), helpstring("method AuthorizeAndLimit2")] HRESULT AuthorizeAndLimit2([in] long lPumpNumber, [in] short nLevel, [in] long lGradePrice, [in] long lMaxValue, [in] long lMaxVolume, [in] long lFlags, [in,out] long *lSyncNumber ,[in] BSTR sRec, [out,retval] long *pVal);
+		[id(55), helpstring("method QueryExtraInfoData")] HRESULT QueryExtraInfoData([in] long lPumpNumber, [in,out] long *lIndexNumber, [in] short nFlags, [out] BSTR *pRec, [out,retval] long *pVal);
+		[id(56), helpstring("method GetReceipt2")] HRESULT GetReceipt2([in]long lPosNumber, [in] BSTR sTrack2, [in] long lIndex,  [out] BSTR *sReceiptData, [in] long lFlags, [out, retval] long *pVal);
+		[id(57), helpstring("method ReceiptPrinted2")] HRESULT ReceiptPrinted2([in] BSTR sTrack2, [in] long lIndex, [in] long lFlags ,[out, retval] long *pVal);
+		[id(58), helpstring("method QueryReceipt")] HRESULT QueryReceipt([in] long lPosNumber , [in] BSTR sTrack2 , [in , out] short * nIndex , [in] short nFlags , [out] BSTR * pData , [out , retval] long  * lRetVal);
+		[id(59), helpstring("method SwitchServer")] HRESULT SwitchServer([in] long lNewServerType , [out , retval] long * plRetVal);
+		[id(60), helpstring("method GetSingleProductInfo")] HRESULT GetSingleProductInfo([in]long lPump , [in] long lFlags ,[in,out] long *lGrade,[out, retval] long *pVal);
+		[id(61), helpstring("method GetAlarm")] HRESULT GetAlarmInfo([in]long lCategory, [in] long lSubCategory ,[in] long lDevice, [in,out]long *plAlarmId ,[in] long lFlags, [out]  BSTR *pData, [out ,retval] long *plVal);
+		[id(62), helpstring("method AckAlarm")] HRESULT AckAlarm([in]long lCategory, [in]  long lSubCategory , [in,]long lAlarmId,[in] long lDevice, [in] long lAlarmNumber, [in]long lCustomerId, [in] long lFlags, [in] BSTR sData, [out ,retval] long *plVal );
+		[id(63), helpstring("method SetPumpModeScheme3")] HRESULT SetPumpModeScheme3([in]  long lPumpNumber,  [in]  long lScheme,  [in] long lMode, [in]  BSTR sPeriodDateTimeStart, [in]  BSTR sPeriodDateTimeEnd, [in]  BSTR sDateTimeStart, [in]  BSTR sDateTimeEnd,  [in] long lServiceFeeNo, [in]  long lFlags,  [out, retval]  long *pVal);
+		[id(64), helpstring("method GetPumpModeScheme3")] HRESULT GetPumpModeScheme3([in] long lPumpNumber, [in] long lScheme, [out]  long  *plMode , [out]   BSTR *psPeriodDateTimeStart, [out]  BSTR *psPeriodDateTimeEnd, [out]   BSTR *psDateTimeStart, [out] BSTR *psDateTimeEnd, [out] long *plServiceFeeNo, [out]   long *plFlags, [out, retval]  long *pVal);
+		[id(65), helpstring("method GetAlarmByCategory")] HRESULT GetAlarmByCategory([in] long  lCategory, [in]  long lSubCategory ,[in] long lDevice, [in] long lFlags, [out] long  *plTotalAlarms, [out] BSTR *pData, [out ,retval] long *plVal);
+		[id(66), helpstring("method GetAlarmById")] HRESULT GetAlarmById([in]long lAlarmId,[in] long lFlags, [out] BSTR *pData, [out, retval] long *plVal);
+		[id(67), helpstring("method GetPAKQuery")] HRESULT GetPAKQuery([out] BSTR * sData , [in , out] long * plRecCount , [in] long lFlags , [out , retval] long * plRetVal);
+		[id(68), helpstring("method GetPAPTrs4")] HRESULT GetPAPTrs4([in] long lPumpNumber, [out]  BSTR *pRec,  [in] long lFlags,[out,retval]  long *pVal);
+		[id(69), helpstring("method LockPump")] HRESULT LockPump([in] long lPumpNumber, [in] long lLock,[in] long lFlags, [out,retval] long *plVal);																   
+		[id(70), helpstring("method GetAccumulateTotals")] HRESULT GetAccumulateTotals([in] long lShiftNumber , [in] long lState, [in] long lPosNumber, [in] long lFlags, [in ] long lVal,  [in] BSTR sStartTime, [in] BSTR sEndTime, [out] long *lRecordCount,   [in, out] BSTR* sRec, [out, retval] long *pVal);
+		[id(71), helpstring("method SetAccumulateState")]  HRESULT SetAccumulateState( [in] long lShiftNumber , [in] long lState,[in] long lFlags, [out, retval] long *pVal);		                                                                
+		[id(72), helpstring("method SetPrePayTrsState")] HRESULT SetPrePayTrsState([in] long lPumpNumber, [in] long lSyncNumber, [in] long lStatus, [in] long lFlags, [out,retval] long *plVal);
+		[id(73), helpstring("method GetVersion")] HRESULT GetVersion([out] BSTR *sVersionList, [in] long lFlags , [out,retval] long *pVal);
+		[id(74), helpstring("method CancelWashCode2")] HRESULT CancelWashCode2([in,out] long * plSyncNumber,[in] long lDevice,[in] long lFlags,[in] BSTR sData,[in] long lRefundCarWash ,[out, retval] long *pVal);
+		[id(75), helpstring("method GetReport")] HRESULT GetReport([in]long lNumber, [in]long lType, [out]BSTR * sReportData,[in]long lFlags,[out,retval]long* lRet);
+		[id(76), helpstring("method GetReceiptRawData")] HRESULT GetReceiptRawData([in]long lPumpNumber, [in] BSTR sTrack2, [in , out] short *nIndex, [out] BSTR *sReceiptRawData, [in,out] long *plFlags, [out, retval] long *pVal);
+		[id(77), helpstring("method GetPumpGradeInfo")] HRESULT GetPumpGradeInfo([in] long lPump, [out] BSTR * sGradesData, [out] long * lRecordcount, [in]long lFlags, [out,retval]long * plVal);
+		[id(78), helpstring("method GetAllTrsQuery")] HRESULT GetAllTrsQuery([in] long lPumpNumber,[out] BSTR * sData , [in , out] long * plRecCount , [in] long lFlags , [out , retval] long * plRetVal);
+		[id(79), helpstring("method AddItem2Trs")] HRESULT AddItem2Trs([in] long lPumpNumber , [in] long lItemSelected , [in] long  lFlags, [out , retval] long * plRetVal);
+		[id(80), helpstring("method SetTrsState2")] HRESULT SetTrsState2([in] long lPumpNumber, [in]long lTrsNumber,[in] long lState, [in] long  lFlags,[out , retval] long *pVal );
+		[id(81), helpstring("method InitEventsInterface")] HRESULT InitEventsInterface([in] long lFlags, [in,out] long *pClientId,[out,retval] long* pVal);
+		[id(82), helpstring("method CloseEventsInterface")] HRESULT CloseEventsInterface([in] long lClientId,[out,retval] long* pVal);
+		[id(83), helpstring("method PAPSwipe")] HRESULT PAPSwipe([in] long lPumpNumber, [in] long lDeviceNumber, [in,out] long *lSeqNumber, [in] long lFlags, [in] BSTR sData, [out,retval] long *pVal);
+		[id(84), helpstring("method PAPReadyTransaction")] HRESULT PAPReadyTransaction([in] long lPumpNum, [in] long lSeqNum, [in] long lTrsNum, [in] short nNozzle, [in] long lVolume, [in] long lValue, [in] short nLevel, [in] long lGradePrice, [in] short nGrade, [in] long lFlags, [in] BSTR sData, [out] BSTR *sRetData, [out,retval] long *pVal);
+		[id(85), helpstring("method GetParam3")] HRESULT GetParam3([in] BSTR sParamPosition, [in] long lKey1, [in] long lKey2, [in] short nFiledType, [in,out] BSTR *sVal, [in,out] long *lVal, [in] BOOL bCreate, [out,retval] long *pVal);
+		[id(86), helpstring("method SetPumpStatus")] HRESULT SetPumpStatus([in] long lPumpNumber, [in] long lStatus, [in] long lRes, [in] long lResExt, [out,retval] long *pVal);
+		[id(87), helpstring("method AuthorizePump3")] HRESULT AuthorizePump3([in] long lPumpNumber,[in] short nLevel,[in] long lGradePrice,[in] long lFlags, [in] long lFlags2, [in] long lLimit, [in] short nGroup, [out,retval] long * pVal);
+		[id(88), helpstring("method GetPAPTrs5")] HRESULT GetPAPTrs5([in] long lPumpNumber, [out]  BSTR *pRec,  [in] long lFlags,[out,retval]  long *pVal);
+		[id(89), helpstring("method CheckAndReserve")] HRESULT CheckAndReserve([in] long lPumpNumber, [in] long lPosNumber, [in] long lPumpRes, [in] long lStatus, [in] BSTR sRec, [in] long lFlags, [in,out] long *lTrsNumber, [out,retval] long *pVal);
+		[id(90), helpstring("method GetPumpTransact5")] HRESULT GetPumpTransact5([in] long lPumpNumber, [in] long lTrsNumber , [out] BSTR *pRec,  [out,retval] long *pVal);
+		[id(91), helpstring("method GetPAKQuery2")] HRESULT GetPAKQuery2([out] BSTR * sData , [in , out] long * plRecCount , [in] long lFlags , [out , retval] long * plRetVal);
+		[id(92), helpstring("method QueryPrePaidTrs2")] HRESULT QueryPrePaidTrs2([in] long lPumpNumber, [in] long lIndexNumber, [in] short nFlags, [out] BSTR *pRec, [out,retval] long *pVal);
+		[id(93), helpstring("method GetAllTrsQuery2")] HRESULT GetAllTrsQuery2([in] long lPumpNumber,[out] BSTR * sData , [in , out] long * plRecCount , [in] long lFlags , [out , retval] long * plRetVal);
+		[id(94), helpstring("method GetOLAMemInfo3")] HRESULT GetOLAMemInfo3([in] long lPumpNumber , [in,out] short *nIndex , [in]  long lFlags, [in] long lVal,[in] BSTR sVal, [out]  BSTR *pRec, [out,retval] long  *pVal);
+		[id(95), helpstring("method SetPumpMisc")] HRESULT SetPumpMisc([in] long lPumpNumber, [in] long lMisc,  [in] long bRemoveMisc, [out,retval] long *pVal);
+		[id(96), helpstring("method SetAlarm")] HRESULT SetAlarm([in] long lCatagory, [in] long lSubCatagory, [in] long lAlarmNumber ,[in] long lDevice,  [in] long lAlarmStatus, [in] long lAlarmValue, [in] long lFlags,[out] long *pAlarmId, [in] BSTR sRec, [out, retval] long *pVal);
+		[id(97), helpstring("method PAPNoFuelReadyTrs")] HRESULT PAPNoFuelReadyTrs([in]long lPumpNumber,[in] long lFlags, [in] BSTR sData , [in] BSTR sParam1, [in] long lParam2, [out,retval] long *pVal);
+		[id(98), helpstring("method GetSaleExtraDetails")] HRESULT GetSaleExtraDetails([in]long lPumpNumber,[in] long lFlags, [in] BSTR sData , [out] BSTR *sRetData, [out,retval] long *pVal);
+		[id(99), helpstring("method GetPAPTrs6")] HRESULT GetPAPTrs6([in] long lPumpNumber, [out]  BSTR *pRec,  [out]  BSTR *pLoyaltySummaryXml, [in] long lFlags,[out,retval]  long *pVal);
+		[id(100), helpstring("method AuthorizeAndLimit3")] HRESULT AuthorizeAndLimit3([in] long lPumpNumber, [in] short nLevel, [in] long lGradePrice, [in] long lMaxValue, [in] long lMaxVolume, [in] long lFlags, [in,out] long *lSyncNumber, [in] BSTR sRec, [in] long lPurchaseID, [out,retval] long *pVal);
+		[id(101), helpstring("method FinalizePrePayTrs")] HRESULT FinalizePrePayTrs([in] long lPumpNumber, [in ] long lFlags, [in ] long lFlags2, [in] long lSyncNumber, [in] BSTR sRec, [in] long lPurchaseID, [out,retval] long *pVal);
+		[id(102), helpstring("method GetPAKTrs")] HRESULT GetPAKTrs([in] long lPumpNumber, [in] long lSyncNumber, [in] long lFlags, [out] BSTR *pRec, [out,retval] long *pVal);
+		[id(103), helpstring("method FinalizePAKTrs")] HRESULT FinalizePAKTrs([in] long lPumpNumber, [in] long lFlags, [in] long lSyncNumber, [in] BSTR sRec, [out,retval] long *pVal);
+		[id(104), helpstring("method GetPumpsTrsInfo")] HRESULT GetPumpsTrsInfo([in] long lPumpNumber,[out] BSTR *pPumpsInfo, [out] BSTR *pAllTrsInfo, [out] BSTR *pGetPumpsInfo3, [in , out] long * pTrsCount, [in] long lGetPumpsFlags, [in] long lGetTrsFlags, [in] long lGetPumpInfo3Flags, [in] long lParam, [out , retval] long *pVal);
+		[id(105), helpstring("method RequestReportReady")] HRESULT RequestReportReady([in] long lType, [in] long lFlags, [out] BOOL *pbIsReady, [out] BSTR *pbstrReportBuffer, [out] long *lpResultCode, [out,retval] long *pVal);
+		[id(106), helpstring("method SetTrsState3")] HRESULT SetTrsState3([in] long lPumpNumber, [in]long lTrsNumber,[in] long lState, [in] long lFlags, [in] BSTR sData, [out , retval] long *pVal);
+		[id(107), helpstring("method SetANPRCommand")] HRESULT SetANPRCommand([in] long lCommand, [in] long lPumpNumber, [in] long lFlags1, [in] long lFlags2, [in] BSTR pRec, [out, retval] long *pVal);
+		[id(108), helpstring("method GetServerStateEx")] HRESULT GetServerStateEx([in,out] long* pServerStateEx, [in] long lFlag, [out,retval] long* pVal);
+		[id(109), helpstring("method QueryExtraInfoData2")] HRESULT QueryExtraInfoData2([in] long lPumpNumber, [in,out] long *lIndexNumber, [in] short nFlags, [out] BSTR *pRec, [out] BSTR *pExtraRec, [out,retval] long *pVal);
+		[id(110), helpstring("method GetParam4")] HRESULT GetParam4([in,out] BSTR *sTableFieldAndVal,[in] long lKey1,[in] long lKey2,[in] short nFiledType, [in] long lFlags, [out] long *lVal, [out,retval] long *pVal);
+		[id(111), helpstring("method ValidateWashCode")] HRESULT ValidateWashCode([in] long lDevice, [out] long *lSyncNumber, [in] long lWashCode, [in] long lWashProgramID, [in] long lFlags, [out, retval] long *pVal);
+		[id(112), helpstring("method SetPumpMiscExt")] HRESULT SetPumpMiscExt([in] long lPumpNumber, [in] long lMisc,  [in] long bRemoveMisc, [out,retval] long *pVal);
+		[id(113), helpstring("method AuthorizeAndLimit4")] HRESULT AuthorizeAndLimit4([in] long lPumpNumber, [in] short nLevel, [in] long lGradePrice, [in] long lMaxValue, [in] long lMaxVolume, [in] long lFlags, [in,out] long *lSyncNumber, [in] BSTR sRec, [in] __int64 lPurchaseID, [out,retval] long *pVal);
+		[id(114), helpstring("method FinalizePrePayTrs2")] HRESULT FinalizePrePayTrs2([in] long lPumpNumber, [in ] long lFlags, [in ] long lFlags2, [in] long lSyncNumber, [in] BSTR sRec, [in] __int64 lPurchaseID, [out,retval] long *pVal);
+		[id(115), helpstring("method GetPrePaidTrs3")] HRESULT GetPrePaidTrs3([in] long lPumpNumber, [in] __int64 lSyncNumber, [in] short nFlags, [out] BSTR *pRec, [out,retval] long *pVal);
+		[id(116), helpstring("method CreateManualPostVoidTransaction")] HRESULT CreateManualPostVoidTransaction([in] long lPumpNumber , [in] BSTR pRec, [in]long lFlags ,[out]long* lNewTrsNumber , [out , retval] long *pVal);
+		[id(117), helpstring("method SetTrsFlags")] HRESULT SetTrsFlags([in] long lPumpNumber, [in] long lTrsNumber, [in] long lMiscFlags, [in] long lMiscFlags2, [out,retval] long *pVal);
+		[id(118), helpstring("method DisablePriceDisplay")] HRESULT DisablePriceDisplay ([out,retval] long *pVal);
+		[id(119), helpstring("method EnablePriceDisplay")] HRESULT EnablePriceDisplay ([out,retval] long *pVal);
+		[id(120), helpstring("method AuthorizePump4")] HRESULT AuthorizePump4([in] long lPumpNumber, [in] short nLevel, [in] long lGradePrice, [in] long lFlags, [in] long lFlags2, [in] long lLimit, [in] short nGroup, [in] BSTR sRec, [out, retval] long * pVal);
+		[id(121), helpstring("method GetOfflineTanks")] HRESULT GetOfflineTanks([in] long lFlags, [out] BSTR * sTankList, [out, retval] long *pVal);
+		[id(122), helpstring("method SetProcessExt")] HRESULT SetProcessExt([in] long lProcessNumber, [in] long lParam1, [in] BSTR sInData, [out] BSTR *sOutData, [out, retval] long * pVal);
+		[id(123), helpstring("method GetCurrentTransactionNumber")] HRESULT GetCurrentTransactionNumber(long lPumpNumber, long* pTrsNumber, long* pVal);
+		[id(124), helpstring("method InitDebit")] HRESULT InitDebit([in] long lPumpGroup01, [in] long lPumpGroup2, [in] long lFlags, [out, retval]long *pVal);
+		[id(125), helpstring("method QueryPumpInfo")] HRESULT QueryPumpInfo([in] long lPumpNumber, [in] long lFlag, [in] BSTR sInData, [out] BSTR *sOutData, [out, retval] long * pVal);
+		[id(126), helpstring("method GetAllWashProgram")] HRESULT GetAllWashProgram([in] long lFlags, [out] BSTR *sOutData, [out, retval] long *pVal);
+		[id(127), helpstring("method GenerateWashCode2")] HRESULT GenerateWashCode2([in] long lDevice, [in] BSTR lWashProgram, [in] long lFlags, [out] long *lSyncNumber, [out, retval] long *pVal);
+		[id(128), helpstring("method SaveWashProgram")] HRESULT SaveWashProgram([in] BSTR sInData, [out, retval] long *pVal);
+	};
+	[
+		object,
+		uuid(7C9373A3-1D37-11D1-B8A5-0000E8D0CBF8),
+		dual,
+		helpstring("IGCI Interface"),
+		pointer_default(unique)
+	]
+	interface IGCI : IDispatch
+	{
+		[id(1), helpstring("method SetPumpStatus")] HRESULT SetPumpStatus([in] long lPumpNumber, [in] long lStatus, [in] long lRes, [in] long lResExt, [out,retval] long *pVal);
+		[id(2), helpstring("method WriteToLog")] HRESULT WriteToLog([in] long lPumpNumber, [in] BOOL bErrorRep, [in] long lError, [in] BOOL bWarningRep ,[in] long lWarning, [in] BOOL bDeviceRep, [in] long lDeviceCode, [in] long lDevice, [in] BOOL bMiscRep, [in] long lMisc, [out,retval] long *pVal);
+		[id(3), helpstring("method InitInterface")] HRESULT InitInterface([in] BOOL bControllerIsMaster,[in] BOOL bControllerGenTrsNumber, [in] BSTR strControllerName, [in] long lControllerVer, [out,retval] long *pVal);
+		[id(4), helpstring("method CancelTransaction")] HRESULT CancelTransaction([in]long lPumpNumber,[in] long lTrsNumber,[out,retval] long *pVal);
+		[id(5), helpstring("method PAKReadyTransaction")] HRESULT PAKReadyTransaction([in]long lPumpNumber,[in]long lTrsNumber,[in] short nNozzle,[in]long lVolume,[in]long lValue,[in]short nLevel,[in]long lGradePrice, [in] short nGrade,[out,retval] long *pVal);
+		[id(6), helpstring("method PAPReadyTransaction")] HRESULT PAPReadyTransaction([in]long lPumpNumber,[in]long lSeqNumber, [in]long lTrsNumber,[in] short nNozzle,[in]long lVolume,[in]long lValue,[in]short nLevel,[in]long lGradePrice, [in] short nGrade,[in] long lFlags, [in] BSTR sData, [out] BSTR *sRetData, [out,retval] long *pVal);
+		[id(7), helpstring("method RollingUpdate")] HRESULT RollingUpdate([in]long lPumpNumber, [in] long lTrsNumber, [in] long lVolume, [in] long lValue, [in] long lGradePrice, [in] short nGrade, [out,retval] long *pVal);
+		[id(8), helpstring("method TransactionStatusCM")] HRESULT TransactionStatusCM([in]long lPumpNumber,[in] long lTrsNumber, [in] short nNozzle, [in] short nIndex, [in] long lStatus, [in] long lOnOffer, [in] long lVolume, [in] long lValue, [in] short nLevel, [in] long lGradePrice, [in] short nGrade,[out,retval] long *pVal);
+		[id(9), helpstring("method TransactionStatusCS")] HRESULT TransactionStatusCS([in]long lPumpNumber, [in]long lTrsNumber, [in] short nNozzle, [in] long lStatus, [in] long lVolume, [in] long lValue, [in] short nLevel, [in] long lGradePrice, [in] short nGrade,  [out,retval] long *pVal);
+		[id(10), helpstring("method DoAutomaticPAKReservation")] HRESULT DoAutomaticPAKReservation([out] BOOL *bAutoRes, [out,retval] long *pVal);
+		[id(11), helpstring("method GetCurrentTransactionNumber")] HRESULT GetCurrentTransactionNumber([in] long lPumpNumber, [out] long *pTrsNumber, [out,retval] long *pVal);
+		[id(12), helpstring("method PAPSwipe")] HRESULT PAPSwipe([in] long lPumpNumber, [in] long lDeviceNumber, [in,out] long *lSeqNumber, [in] long lFlags, [in] BSTR sData, [out, retval] long *pVal);
+		[id(13), helpstring("method PumpTotals")] HRESULT PumpTotals([in] long lPumpNumber, [in] short nNozzle, [in] short nGrade, [in] short nFlags, [in] long lVolumeH, [in] long lVolumeL, [in] long lValueAH, [in] long lValueAL, [in] long lValueBH, [in] long lValueBL, [out,retval] long *pVal);
+		[id(14), helpstring("method PumpMode")] HRESULT PumpMode([in] long lPumpNumber, [in] long lPumpMode, [out,retval] long *pVal);
+		[id(15), helpstring("method GradePrice")] HRESULT GradePrice([in] long lPumpNumber, [in] short nNozzle, [in] short nGrade, [in] short nFlags, [in] long lPriceA, [in] long lPriceB, [out,retval] long *pVal);
+		[id(16), helpstring("method TankReading")] HRESULT TankReading([in] long lTankNumber,[in] long lProduct, [in] short nFlags, [in] long lStatus, [in] long lFuelLevel, [in] long lWaterLevel, [in] long lTemperature, [in] long lVolume, [in] long lWaterVolume, [out,retval] long *pVal);
+		[id(17), helpstring("method GetParam")] HRESULT GetParam([in] BSTR sTableName, [in] long lKey1, [in] long lKey2, [in] BSTR sFiledName, [in] short nFiledType, [in,out] BSTR *sVal,[in,out] long *lVal, [in] BOOL bCreate, [out,retval] long *pVal);
+		[id(18), helpstring("method GetRealTimeClock")] HRESULT GetRealTimeClock([out] BSTR *psDateTime, [out,retval] long *pVal);		
+		[id(19), helpstring("method DeliveryReport")] HRESULT DeliveryReport([in] long lTankNumber, [in] long lProduct, [in] short nFlags, [in] long lStatus, [in] long lTag, [in] long lVolume, [in] BSTR sDateAndTime, [out, retval] long *pVal);
+		[id(20), helpstring("method GetGradePrice")] HRESULT GetGradePrice([in] short nGrade, [out,retval] long *pVal);
+		[id(21), helpstring("method TankStatus")] HRESULT TankStatus([in] long lTankNumber, [in] long lStatus, [out,retval] long *pVal);
+		[id(22), helpstring("method InitInterface2")] HRESULT InitInterface2([in] BSTR strControllerName, [in] long lControllerVer, [in] long lFlags, [out,retval] long *pVal);
+		[id(23), helpstring("method Watchdog")] HRESULT Watchdog([in] long lParam, [out, retval] long *pVal);
+		[id(24), helpstring("method SetParam")] HRESULT SetParam([in] BSTR sTableName, [in] long lKey1, [in] long lKey2, [in] BSTR sFiledName, [in] short nFiledType, [in] BSTR sVal, [in] long lVal, [in] BOOL bCreate, [out,retval] long * pVal);
+		[id(25), helpstring("method AVIStart")] HRESULT AVIStart([in] long lPumpNumber, [in] long lNozzleNumber, [in] BSTR sData, [out,retval] long *pVal);
+		[id(26), helpstring("method AVIStop")] HRESULT AVIStop([in] long lPumpNumber, [in] long lNozzleNumber, [out,retval] long *pVal);
+		[id(27), helpstring("method GetPAPSwipeData")] HRESULT GetPAPSwipeData([in] long lPumpNumber, [in] long lFlags, [out] BSTR *pData, [out,retval] long *pVal);
+		[id(28), helpstring("method TankReading2")] HRESULT TankReading2([in] long lTankNumber,[in] long lProduct, [in] short nFlags, [in] long lStatus1, [in] long lFuelLevel, [in] long lWaterLevel, [in] long lTemperature, [in] long lVolume, [in] long lWaterVolume, [in] long lStatus2, [in] long lFuelValue, [in] long lPricePerLitre,[out,retval] long *pVal);
+		[id(29), helpstring("method PumpTotals2")] HRESULT PumpTotals2([in] long lPumpNumber, [in] short nNozzle, [in] short nGrade, [in] short nFlags, [in] long lVolumeH, [in] long lVolumeL, [in] long lValueAH, [in] long lValueAL, [in] long lValueBH, [in] long lValueBL, [in] long lPumpStatus, [in] long lNozzleStatus, [out,retval] long *pVal);
+		[id(30), helpstring("method DeliveryReport2")] HRESULT DeliveryReport2([in] long lTankNumber, [in] long lProduct, [in] short nFlags, [in] long lStatus, [in] long lTag, [in] long lVolume, [in] BSTR sStartDateAndTime, [in] BSTR sEndDateAndTime, [in] long lStartVolume, [in] long lEndVolume, [in] long lTemperature,[out, retval] long *pVal);
+		[id(31), helpstring("method Alarm")] HRESULT Alarm([in] long lCatagory, [in] long lCode, [in] long lFlags, [in] BSTR sStartDateAndTime, [in] BSTR sEndDateAndTime, [out, retval] long *pVal);
+		[id(32), helpstring("method CarWashStatus")] HRESULT CarWashStatus([in] long lDevice, [in] long lSrc, [in] long lStatus, [out, retval] long *pVal);
+		[id(33), helpstring("method WashCodeResult")] HRESULT WashCodeResult([in] long lSyncNumber,[in] long lDevice, [in] long lResult, [in] BSTR sData, [out, retval] long *pVal);
+		[id(34), helpstring("method SetPAPSwipeData")] HRESULT SetPAPSwipeData([in] long lPumpNumber, [in] long lFlags, [in] BSTR sData, [out,retval] long *pVal);
+		[id(35), helpstring("method GetParam3")] HRESULT GetParam3([in] BSTR sParamPosition, [in] long lKey1, [in] long lKey2, [in] short nFiledType, [in,out] BSTR *sVal, [in,out] long *lVal, [in] BOOL bCreate, [out, retval] long *pVal);
+		[id(36), helpstring("method SetParam3")] HRESULT SetParam3([in] BSTR sParamPosition, [in] long lKey1, [in] long lKey2, [in] short nFiledType, [in] BSTR sVal, [in] long lVal, [in] BOOL bCreate, [out, retval] long *pVal);
+		[id(37), helpstring("method GetReceiptRowData")] HRESULT GetReceiptRowData([in]long lPumpNumber, [in] BSTR sTrack2, [in] short nIndex, [out] BSTR *sReceiptRowData, [in] long lFlags, [out, retval] long *pVal);
+		[id(38), helpstring("method GetCardInfo")] HRESULT GetCardInfo([in] BSTR sAccountNumber,[in] BSTR sTrack1, [in] BSTR sTrack2, [in] BSTR sShortCardName, [out] BSTR *sRetData, [out,retval] long *pVal);
+		[id(39), helpstring("method GetReceiptCounter")] HRESULT GetReceiptCounter([out] long *plConuter, [in] long iType, [in] long lFlags, [out, retval] long *pVal);
+		[id(40), helpstring("method GetServiceFee")] HRESULT GetServiceFee([in] long lPump, [in] long lTrsType, [in] long lTrsNumber, [in] BSTR stTime, [in] long lFlags, [out] long* pValue,    [out, retval]long *pRetVal);
+		[id(41), helpstring("method ReportRequest")] HRESULT ReportRequest([in] long lParam1, [in] long lParam2, [in] long lFlags, [in] BSTR sData, [out] long * lRefNum, [out,retval] long * pVal);
+		[id(42), helpstring("method SetTrsState")] HRESULT SetTrsState([in] long lPumpNumber , [in] long lTrsNumber , [in] long lState , [in] long lFlags , [in] BSTR sData , [out , retval] long * plRetVal);
+		[id(43), helpstring("method ReceiptPrinted")] HRESULT ReceiptPrinted([in] BSTR sTrack2, [in] long lIndex, [in] long lFlags ,[out, retval] long *pVal);
+		[id(44), helpstring("method GetReceiptRawData2")] HRESULT GetReceiptRawData2([in]long lPumpNumber, [in] BSTR sTrack2, [in , out] short *nIndex, [out] BSTR *sReceiptRawData, [in] long lFlags, [out, retval] long *pVal);
+		[id(45), helpstring("method GetPumpInfo")] HRESULT GetPumpInfo([in] long lPumpNumber , [out] BSTR * pRec , [in] long lFlags , [out , retval] long * pVal);
+		[id(46), helpstring("method GetSingleProductInfo")] HRESULT GetSingleProductInfo([in]long lPump , [in] long lFlags ,[in,out] long *lGrade,[out, retval] long *pVal);
+		[id(47), helpstring("method DebitProcessCmd")] HRESULT DebitProcessResultCmd([in] long lPumpNumber , [in] long lSessionId , [in] long lFlag, [in] BSTR sData , [out,retval] long *pVal);		
+		[id(48), helpstring("method GetDebitDataInfo")] HRESULT GetDebitDataInfo([in] long lPumpNumber, [in] long lFlags, [out] BSTR *pData, [out,retval] long *pVal);
+		[id(49), helpstring("method GetReceiptRawData3")] HRESULT GetReceiptRawData3([in]long lPumpNumber, [in] BSTR sTrack2, [in , out] short *nIndex, [out] BSTR *sReceiptRawData, [in,out] long *plFlags, [out, retval] long *pVal);
+		[id(50), helpstring("method SetDebitData")] HRESULT SetDebitData([in] long lPumpNumber, [in] long lFlags, [in] BSTR sData, [out,retval] long *pVal);
+		[id(51), helpstring("method TankReading3")] HRESULT TankReading3([in] long lTankNumber,[in] long lProduct, [in] short nFlags, [in] long lStatus1, [in] long lFuelLevel, [in] long lWaterLevel, [in] long lTemperature, [in] long lVolume, [in] long lWaterVolume, [in] long lStatus2, [in] long lFuelValue, [in] long lPricePerLitre, [in] long lTcVolume, [in] long lUllage, [in] BSTR sRec, [out,retval] long *pVal);
+		[id(52), helpstring("method SetAlarm")] HRESULT SetAlarm([in] long lCatagory, [in] long lSubCatagory, [in] long lAlarmNumber ,[in] long lDevice,  [in] long lAlarmStatus,  [in] long lAlarmValue, long lFlags,[out]long *pAlarmId, [in] BSTR sRec, [out, retval] long *pVal);
+		[id(53), helpstring("method SetCashAccepturData")] HRESULT SetCashAcceptorData([in] long lPumpNumber, [in] long lDevice, [in] long lSeqNum , [in] long lFlags, [in] BSTR CashSaleData , [out, retval] long * pVal);
+		[id(54), helpstring("method GetCashAcceptorData")] HRESULT GetCashAcceptorData([in] long lPumpNumber,[in] long lDevice, [in] long lSeqNum , [in] long lFlags, [out] BSTR *CashSaleData , [out, retval] long * pVal);
+		[id(55), helpstring("method DisplayInfo")] HRESULT DisplayInfo([in] long lPumpNumber , [in] BSTR sMsg , [in] long lFlags , [out , retval] long * pRetVal);
+		[id(56), helpstring("method QueryData")] HRESULT QueryData([in] long lFileNum, [in ,out] long *lIndexNumber , [in] BSTR sKey , [in] long lFlags, [out] BSTR *pRec , [out,retval] long *pVal);		
+		[id(57), helpstring("method SetShift")] HRESULT SetShift([in] short nDayOfWeek, [in] short nShiftNumber, [in] short nShiftFlags, [in] BSTR sStartTime, [out,retval] long *pVal);
+		[id(58), helpstring("method GetOLABuffer")] HRESULT GetOLABuffer([in] long lPumpNumber , [in] BSTR sCardData , [out] BSTR * sOLABuffer , [in] long lFlags , [out , retval] long * pRet);
+		[id(59), helpstring("method SetMaintenance")] HRESULT SetMaintenance([in] long lLock, [in] long lParam, [out, retval] long *pVal);
+		[id(60), helpstring("method GetCardInfo2")] HRESULT GetCardInfo2([in] long lPumpNumber, [in] long lDeviceNumber, [in,out] long *lSeqNumber, [in] long lFlags, [in] BSTR sData, [out, retval] long *pVal);
+		[id(61), helpstring("method MoveTerminalTransactionToPump")] HRESULT MoveTerminalTransactionToPump([in]long lTerminalId, [in] long lPumpId,[in] long lStatus,[in] long lFlags, [out,retval] long *pVal );
+		[id(62), helpstring("method PAKReadyTransaction2")] HRESULT PAKReadyTransaction2([in]long lPumpNumber,[in]long lTrsNumber,[in] short nNozzle,[in]long lVolume,[in]long lValue,[in]short nLevel,[in]long lGradePrice, [in] short nGrade, [in] long lFlage, [in] long lTotalVal,[in] BSTR pRec, [out,retval] long *pVal);
+		[id(63), helpstring("method SetPumpMode")] HRESULT SetPumpMode([in] long lPumpNumber, [in] long lPumpMode,long lFlags, [out,retval] long *pVal);
+		[id(64), helpstring("method GetCardInfo3")] HRESULT GetCardInfo3([in] BSTR sAccountNumber,[in] BSTR sTrack1, [in] BSTR sTrack2, [in] BSTR sShortCardName, [in] long lFlags,[in,out] long *lSesionType,[in] long lPumpNumber,[out] BSTR *sRetData, [out,retval] long *pVal);
+		[id(65), helpstring("method SetProcess")] HRESULT SetProcess([in] long lProcessNumber, [in] long lParam1, [in] long lParam2, [out,retval] long *plRetVal);
+		[id(66), helpstring("method SetConnectivityStatus")] HRESULT SetConnectivityStatus([in] BSTR sPSConnStatus, [in] long lFlags, [out,retval]  long *pVal);
+		[id(67), helpstring("method GetPAKQuery")] HRESULT GetPAKQuery([in] BSTR sRestrictionData,[out] BSTR * sOutData , [in , out] long * plRecCount , [in] long lFlags ,  [out , retval] long * plRetVal);
+		[id(68), helpstring("method GetPumpMode")] HRESULT GetPumpMode([in]  long lPumpNumber,  [out] long *plPumpMode, [out]   long *plFlags, [out] long *plMsgNumber, [out,retval] long *plVal);
+		[id(69), helpstring("method ParseOLABuffer")] HRESULT ParseOLABuffer([in] long lPumpNumber, [in,out]BSTR *cCardSaleALL3, [in]BSTR sOLABuffer, [in]long lFlags, [out , retval] long * pRet);
+		[id(70), helpstring("method SetVersion")] HRESULT SetVersion([in] BSTR sVersionList , [in] long lFlags  , [out ,retval] long *pVal);
+		[id(71), helpstring("method GetStationStatus")] HRESULT GetStationStatus([in , out] long * lPumpMap1 , [in , out] long * lPumpMap2 , [in] long lFlags , [out , retval] long * pRetVal);
+		[id(72), helpstring("method UploadBuffer")] HRESULT UploadBuffer([in] long lTerminalId,[in] long lPumpNumber,[in] long lSessionId,[in] long lUploadType,[in] BSTR sInBuffer,[out]BSTR *sOutBuffer,[in] long lExDataSize,[in] BSTR sExData,[out,retval] long *pVal );
+		[id(73), helpstring("method GetWetStockData")] HRESULT GetWetStockData([in] long lWetStockFlags,  [out,retval] long *pVal);
+		[id(74), helpstring("method GetTankMemoryData")] HRESULT GetTankMemoryData([in]long lTankNumber, [out] BSTR *pRec, [in]long lFlags, [in,out]long *lCounter, [out,retval]long *pVal);
+		[id(75), helpstring("method GetParam4")] HRESULT GetParam4([in] BSTR sParamPosition, [in] long lKey1, [in] long lKey2, [in] short nFiledType, [in,out] BSTR *sVal, [in,out] long *lVal, [in] BOOL bCreate, [in] long lFlags, [in] long lDataBase, [out, retval] long *pVal);
+		[id(76), helpstring("method SetParam4")] HRESULT SetParam4([in] BSTR sParamPosition, [in] long lKey1, [in] long lKey2, [in] short nFiledType, [in] BSTR sVal, [in] long lVal, [in] BOOL bCreate, [in] long lFlags, [in] long lDataBase, [out, retval] long *pVal);
+		[id(77), helpstring("method GetAttTrs")] HRESULT GetAttTrs([in] long lPumpNumber, [in] long lFlags, [in] BSTR sIndex, [out] BSTR * sRec,[out,retval] long * pVal );
+		[id(78), helpstring("method PriceChangeUpdate")] HRESULT PriceChangeUpdate([in] long lPumpNumber , [in] long lPosition ,[in] long lFlags , [out,retval] long * plVal);
+		[id(79), helpstring("method SetGradesRestriction")] HRESULT SetGradesRestriction([in] BSTR sTagPumpsNuzzlesRestrict,[in] long lFlags  ,[out,retval] long *pVal);
+		[id(80), helpstring("method GetTransListQuery")] HRESULT GetTransListQuery([in] long lPumpNumber,[out] BSTR *sData,[in,out] long *plRecCount, [in]long *lFlags,[out , retval] long *pVal);
+		[id(81), helpstring("method SetCashAcceptorStatus")] HRESULT SetCashAcceptorStatus([in] long   lTerminalId ,  [in] long lFlags ,  [in] long lStatus, [out] BSTR *sRec, [out , retval] long *pVal);
+		[id(82), helpstring("method GetCashAcceptorReport")] HRESULT GetCashAcceptorReport([in]long lTerminalId, [in]long lFlags, [out] BSTR *sHeader,[out] BSTR *sRecords,[out] long *lRecordCount,[out , retval] long *pVal);
+		[id(83), helpstring("method GetCardInfoEx")] HRESULT GetCardInfoEx([in] long lClientId,[in] BSTR sInBuffer,[in] BSTR sInfoType,[in]  long lFlags,[out] BSTR *sRetData, [out,retval] long *pVal);
+		[id(84), helpstring("method TankReadingEx")] HRESULT TankReadingEx([in] long lTankNumber,  [in] long lFlags, [in] BSTR sRec, [out,retval] long *pVal);
+		[id(85), helpstring("method DeliveryReportEx")] HRESULT DeliveryReportEx([in] long lTankNumber,  [in] long lFlags, [in] BSTR sRec, [out,retval] long *pVal);
+		[id(86), helpstring("method ReadyOfflineTRS")] HRESULT ReadyOfflineTRS([in]long lPumpNumber,[in] long lFlags, [in] BSTR sData , [in] BSTR sParam1, [in] long lParam2, [in] long lParam3, [out] BSTR *sRetData, [out,retval] long *pVal);
+		[id(87), helpstring("method SetPumpStatus2")] HRESULT SetPumpStatus2([in] long lPumpNumber, [in] long lStatus, [in] long lRes, [in] long lResExt, [in] long lFlags, [in] short nGrade, [in] short nPosition, [in] BSTR sData, [out,retval] long *pVal);
+		[id(88), helpstring("method SetPumpMisc")] HRESULT SetPumpMisc([in] long lPumpNumber, [in] long lMisc, [in] long bRemoveMisc, [out,retval] long *pVal);
+		[id(89), helpstring("method SetPumpMiscExt")] HRESULT SetPumpMiscExt([in] long lPumpNumber, [in] long lMisc,  [in] long bRemoveMisc, [out,retval] long *pVal);
+		[id(90), helpstring("method ReportReady")] HRESULT ReportReady([in] long lFlags, [in] BSTR wszReportText, [in] long lParam, [out,retval] long *pVal);
+		[id(91), helpstring("method CarWashGeneralReqResponse")] HRESULT CarWashGeneralReqResponse([in] long lDevice, [in] long lResult, [in] long lFlags1, [in] long lFlags2, [in] BSTR sData, [out, retval] long *pVal);
+		[id(92), helpstring("method PriceDisplayPanelStatus")] HRESULT PriceDisplayPanelStatus([in] long lDevice , [in] long lStatus, [in] BSTR sRec ,[out, retval] long *pVal);
+		
+	};
+
+	[ // the sink interface 
+		object,
+		uuid(9BAC1F61-1ECE-11d1-B8A5-0000E8D0CBF8),
+		dual,
+		helpstring("IGCIEvents Interface"),
+		pointer_default(unique)
+	]
+	interface IGCIEvents : IDispatch
+	{
+		[id(1), helpstring("method AuthorizeAndLimit")] HRESULT AuthorizeAndLimit([in] long lPumpNumber,[in] long lSrc,[in] short nLevel,[in] long lGradePrice,  [in] long lMaxValue, [in] long lMaxVolume, [in] short nFlags, [out,retval] long *pVal);
+		[id(2), helpstring("method StopPump")] HRESULT StopPump([in] long lPumpNumber,[in] long lSrc, [out,retval] long *pVal);
+		[id(3), helpstring("method ResumePump")] HRESULT ResumePump([in] long lPumpNumber,[in] long lSrc, [out,retval] long *pVal);
+		[id(4), helpstring("method GetPumpStatus")] HRESULT GetPumpStatus([in] long lPumpNumber, [in] long lSrc, [out,retval] long *pVal);
+		[id(5), helpstring("method Reset")] HRESULT Reset([in] long lSrc, [out,retval] long *pVal);
+		[id(6), helpstring("method SetPumpLimit")] HRESULT SetPumpLimit([in] long lPumpNumber,[in] long lSrc, [in] short nLevel, [in] long lMaxValue, [in] long lMaxVolume, [in] short nFlags, [out,retval] long *pVal);
+		[id(7), helpstring("method ReservePump")] HRESULT ReservePump([in] long lPumpNumber,[in] long lSrc,[in] long lRes, [out,retval] long *pVal);
+		[id(8), helpstring("method ReleasePump")] HRESULT ReleasePump([in] long lPumpNumber,[in] long lSrc, [in] long lRes, [out,retval] long *pVal);
+		[id(9), helpstring("method SetPumpMode")] HRESULT SetPumpMode([in] long lPumpNumber, [in] long lSrc, [in] long lMode, [out,retval] long *pVal);
+		[id(10), helpstring("method GetPumpMode")] HRESULT GetPumpMode([in] long lPumpNumber, [in] long lSrc, [out,retval] long *pVal);
+		[id(11), helpstring("method SetGradePrice")] HRESULT SetGradePrice([in] long lPumpNumber, [in] long lSrc, [in] short nNozzle, [in] short nGrade, [in] short nFlags, [in] long lPriceA, [in] long lPriceB, [out,retval] long *pVal);
+		[id(12), helpstring("method GetGradePrice")] HRESULT GetGradePrice([in] long lPumpNumber, [in] long lSrc, [in] short nNozzle, [in] short nGrade, [out,retval] long *pVal);
+		[id(13), helpstring("method GetPumpTotals")] HRESULT GetPumpTotals([in] long lPumpNumber, [in] long lSrc, [out,retval] long *pVal);
+		[id(14), helpstring("method PAPSwipeResult")] HRESULT PAPSwipeResult([in] long lPumpNumber, [in] long lDeviceNumber, [in] long lSeqNumber, [in] long lRetcode, [in] long lFlags, [in] BSTR sData, [out,retval] long *pVal);
+		[id(15), helpstring("method SetRealTimeClock")] HRESULT SetRealTimeClock([in] long lSrc, [in] BSTR sDateTime, [out,retval] long *pVal);		
+		[id(16), helpstring("method UpdateParam")] HRESULT UpdateParam([in] long lSrc,[in] BSTR sTableName, [in] long lKey1, [in] long lKey2, [in] BSTR sFiledName, [in] short nFiledType, [in] BSTR sVal,[in] long lVal,[out,retval] long *pVal);
+		[id(17), helpstring("method CancelTrs")] HRESULT CancelTrs([in] long lPumpNumber, [in] long lSrc, [in] long lRes, [in] long lPumpStatus, [in] long lTrsNumber, [out,retval] long * pVal);
+		[id(18), helpstring("method GetTankReading")] HRESULT GetTankReading([in] long lTankNumber, [in] long lSrc, [in] long lReadStatus, [out, retval] long *pVal);		
+		[id(19), helpstring("method GetDeliveryReport")] HRESULT GetDeliveryReport([in] long lTankNumber, [in] long lSrc, [out,retval] long *pVal);
+		[id(20), helpstring("method GetTankStatus")] HRESULT GetTankStatus([in] long lTankNumber, [out,retval] long *pVal);
+		[id(21), helpstring("method SetTrsState")] HRESULT SetTrsState([in] long lPumpNumber, [in] long lSrc, [in] long lTrsNumber, [in] long lState, [out,retval] long *pVal);
+		[id(22), helpstring("method Watchdog")] HRESULT Watchdog([in] long lSrc, [in] long lTimeInterval, [in,out] long *lParam, [out, retval] long *pVal);
+		[id(23), helpstring("method GetNewWashCode")] HRESULT GetNewWashCode([in] long lSyncNumber,[in] long lDevice, [in] long lSrc, [in] long lWashProgram, [in] long lFlags, [out, retval] long *pVal);
+		[id(24), helpstring("method GetCarWashStatus")] HRESULT GetCarWashStatus([in] long lDevice, [in] long lSrc, [in] long lFlags, [out, retval] long *pVal);
+		[id(25), helpstring("method CancelWashCode")] HRESULT CancelWashCode([in] long lSyncNumber,[in] long lDevice, [in] long lSrc, [in] long lFlags, [in] BSTR sData, [out, retval] long *pVal);
+		[id(26), helpstring("method GetWetStockData")] HRESULT GetWetStockData([in] long lWetStockFlags, [out,retval] long *pVal);
+		[id(27), helpstring("method ReConfigure")] HRESULT ReConfigure([in] long lConfigureFlags, [out,retval] long *pVal);
+		[id(28), helpstring("method FormatReceipt")] HRESULT FormatReceipt([in] BSTR sReceiptData, [in] long lFlags, [out] BSTR *sReceiptText , [out,retval] long *pVal);
+		[id(29), helpstring("method PrintReport")] HRESULT PrintReport([in] long lTerminalType, [in] long lTerminalNumber, [in] BSTR sData, [in] long lFlags, [in] long lTextLength, [out,retval] long *pVal);
+		[id(30), helpstring("method AuthorizeAndLimit2")] HRESULT AuthorizeAndLimit2([in] long lPumpNumber,[in] long lSrc,[in] short nLevel,[in] long lGradePrice,  [in] long lMaxValue, [in] long lMaxVolume, [in] short nFlags,[in] BSTR sDiscountMap, [out,retval] long *pVal);
+		[id(31), helpstring("method TLSCommand")] HRESULT TLSCommand([in] BSTR sCommand , [in] long lCommand , [in] long lTankNumber , [in] long lFlags , [out , retval] long * plRetVal);
+		[id(32), helpstring("method DebitProcessCmd")] HRESULT DebitProcessCmd([in] long lPumpNumber , [in] long lSessionId , [in] long lFlags, [in] BSTR sData , [out,retval] long *pVal);
+		[id(33), helpstring("method GeneralSystemEvent")] HRESULT GeneralSystemEvent([in] long lEventId , [in] long lFlags , [out, retval] long *pVal);		
+		[id(34), helpstring("method SetPumpMode2")] HRESULT SetPumpMode2([in] long lPumpNumber, [in] long lSrc, [in] long lMode, [in] long lFlags, [in]  long lServiceMode,[in] long lServiceFee ,[out,retval] long *pVal);
+		[id(35), helpstring("method ReconfigurationEvent")] HRESULT ReConfigure2([in] long lTableId , [in] long lSubTableId ,[in] long lSubTableIdExt , [in] long lFlags , [out , retval] long * pRetVal);
+		[id(36), helpstring("method CardInfoResult")] HRESULT CardInfoResult([in] long lPumpNumber, [in] long lDeviceNumber, [in] long lSeqNumber, [in] long lRetcode, [in] long lFlags, [in] BSTR sData, [out,retval] long *pVal);
+		[id(37), helpstring("method TankGaugeData")] HRESULT TankGaugeData([in]long lTankNumber, [in] long lFlags, [in] BSTR sRec,  [out, retval]long *pVal);
+		[id(38), helpstring("method DisplayMsg")] HRESULT DisplayMsg([in] long lPumpNumber, [in] long lTimeOut, [in] BSTR sRec,  [in] long lMsgLen,  [out,retval] long *plVal);
+		[id(39), helpstring("method FormatReport")] HRESULT FormatReport( [in] BSTR sReport,[in] long lType,[in] long lFlags,[out]BSTR *sReportText,[retval][out] long *pVal);
+		[id(40), helpstring("method SetPumpMode3")] HRESULT SetPumpMode3([in]  long lPumpNumber,[in]  long lSrc,[in]  long lMode,[in]  long lFlags,[in]  long lServiceMode,[in]  long lPriceLevel,[in]  long lServiceFee,[out , retval] long *pVal);
+		[id(41), helpstring("method AuthorizeAndLimit3")] HRESULT AuthorizeAndLimit3([in] long lPumpNumber,[in] long lSrc,[in] long lLevel,[in] long lGradePrice,  [in] long lMaxValue, [in] long lMaxVolume, [in] long lFlags,[in] BSTR sRec, [out,retval] long *pVal);
+		[id(42), helpstring("method SetGradePriceWithTime")] HRESULT SetGradePriceWithTime([in] long lPumpNumber, [in] long lSrc, [in] short nNozzle, [in] short nGrade, [in] short nFlags, [in] long lPriceA, [in] long lPriceB, [in] BSTR sDateTime,[out,retval] long *pVal);
+		[id(43), helpstring("method SetTrsState3")] HRESULT SetTrsState3([in] long lPumpNumber, [in] long lSrc, [in] long lTrsNumber, [in] long lState, [in] long lFlags, [in] BSTR sData,[out,retval] long *pVal);
+		[id(44), helpstring("method GeneralSystemEvent2")] HRESULT GeneralSystemEvent2([in] long lEventId, [in] long lFlags, [in] BSTR bstrData, [out, retval] long *pVal);
+		[id(45), helpstring("method CarWashGeneralReq")] HRESULT CarWashGeneralReq([in] long lDevice, [in] long lFlags1, [out, retval] long *pVal);
+		[id(46), helpstring("method GetWashCodeStatus")] HRESULT GetWashCodeStatus([in] long lSyncNumber,[in] long lDevice, [in] long lSrc, [in] long lFlags, [in] BSTR sData, [out, retval] long *pVal);
+		[id(47), helpstring("method DisablePriceDisplay")] HRESULT DisablePriceDisplay([in] long lDevice,[in] long lFlags,[in] long lDisablePriceDisplayPanel,[in] BSTR sData,[out , retval] long *pVal);
+		[id(48), helpstring("method EnablePriceDisplay")] HRESULT EnablePriceDisplay([in] long lDevice,[in] long lFlags,[in] long lEnablePriceDisplay,[in] BSTR sData,[out , retval] long *pVal);
+		[id(49), helpstring("method SmartReconfigure")] HRESULT SmartReconfigure([in] long lDeviceNumberMask1, [in] long lDeviceNumberMask2, [in] long lTableId, [in] long lSubTableId, [in] long lSubTableIdExt, [in] long lFlags, [out, retval] long * pRetVal);
+	};
+
+
+	[
+		object,
+		uuid(43464621-C31A-11D1-8625-0000E81A8D8B),
+		dual,
+		helpstring("ICtrl Interface"),
+		pointer_default(unique)
+	]
+	interface ICtrl : IDispatch
+	{
+ 		[id(1), helpstring("method SetPumpMode")] HRESULT SetPumpMode([in] long lPumpNumber, [in] long lMode, [out,retval] long *pVal);
+		[id(2), helpstring("method GetPumpMode")] HRESULT GetPumpMode([in] long lPumpNumber, [out] long *lMode, [out,retval] long *pVal);
+		[id(3), helpstring("method SetGradePrice")] HRESULT SetGradePrice([in] long lPumpNumber, [in] short nNozzle, [in] short nGrade,  [in] long lMode, [in] short nLevel, [in] long lPrice, [in] BSTR sTimeValid, [in] short nFlags, [out,retval] long *pVal);
+		[id(4), helpstring("method GetGradePrice")] HRESULT GetGradePrice([in] long lPumpNumber, [in] short nNozzle, [in] short nGrade,  [in] long lMode, [in] short nLevel, [out] long *lPrice, [out] BSTR *sDateTimeValid, [out,retval] long *pVal);
+		[id(5), helpstring("method SetShift")] HRESULT SetShift([in] short nDayOfWeek, [in] short nShiftNumber, [in] short nShiftFlags, [in] BSTR sStartTime, [out,retval] long *pVal);
+		[id(6), helpstring("method GetShift")] HRESULT GetShift([in] short nDayOfWeek, [in] short nShiftNumber, [out] short *nShiftFlags, [out] BSTR *sStartTime, [out,retval] long *pVal);
+		[id(7), helpstring("method GetPumpTotals")] HRESULT GetPumpTotals([in] short nFlags, [in,out] long *lIndexNumber, [out] long *lPump, [out] short *nNozzle, [out] short *nGrade, [out] short *nTotalsFlags, [out] BSTR *sVolume, [out] BSTR *sValueA, [out] BSTR *sValueB, [out] long *lActiveReadNumber, [out] long *lShiftNumber, [out] BSTR *sDateTime, [out,retval] long *pVal);
+		[id(8), helpstring("method RemovePumpTotals")] HRESULT RemovePumpTotals([in] short nFlags, [in] long lRecIndex, [out,retval] long *pVal);
+		[id(9), helpstring("method GetTankReading")] HRESULT GetTankReading([in] short nFlags, [in,out]	long *lIndexNumber, [out] long *lTank, [out] long *lProduct, [out] long *lStatus, [out] short *nReadingFlags, [out] long *lFuelLevel, [out] long *lWaterLevel, [out] long *lTemperature, [out] long *lFuelVolume, [out] long *lWaterVolume, [out] long *lActiveReadNumber, [out] long *lShiftNumber, [out] BSTR *sDateTime, [out,retval] long *pVal);
+		[id(10), helpstring("method RemoveTankReading")] HRESULT RemoveTankReading([in] short nFlags, [in] long lRecIndex, [out,retval] long *pVal);
+		[id(11), helpstring("method GetDeliveryReport")] HRESULT GetDeliveryReport([in] short nFlags, [in,out] long *lIndexNumber, [out] long *lTank, [out] long *lProduct, [out] long *lStatus, [out] short *nDeliveryFlags, [out] long *lTag, [out] long *lDeliveredVolume, [out] long *lActiveReadNumber, [out] long *lShiftNumber, [out] BSTR *sDeliveryDateTime, [out,retval] long *pVal);
+		[id(12), helpstring("method RemoveDeliveryReport")] HRESULT RemoveDeliveryReport([in] short nFlags, [in] long lRecIndex, [out,retval] long *pVal);
+		[id(13), helpstring("method SetRealTimeClock")] HRESULT SetRealTimeClock([in] BSTR sDateAndTime, [out,retval] long *pVal);
+		[id(14), helpstring("method ControlStatus")] HRESULT ControlStatus([in] short nFlags, [in,out] long *lTotalIndex, [in,out] long *lTankReadIndex, [in,out] long *lDeliveryIndex, [out] long *lActiveShiftNumber, [out] short *nStationStatus,[out,retval] long *pVal);
+		[id(15), helpstring("method GetProcessStatus")] HRESULT GetProcessStatus([in] long lProcessNumber, [out] long *lProcessStatus, [out] long *lPumpNumberA, [out] long *lPumpProblemA, [out] long *lPumpNumberB, [out] long *lPumpProblemB, [out] long *lTankNumber, [out] long *lTankProblem, [out] long *lFlags, [out,retval] long *pVal);
+		[id(16), helpstring("method SetParam")] HRESULT SetParam([in] BSTR sTableName, [in] long lKey1, [in] long lKey2, [in] BSTR sFiledName, [in] short nFiledType, [in] BSTR sVal, [in] long lVal, [in] BOOL bCreate, [out,retval] long * pVal);
+		[id(17), helpstring("method GetParam")] HRESULT GetParam([in] BSTR sTableName, [in] long lKey1, [in] long lKey2, [in] BSTR sFiledName, [in] short nFiledType, [in,out] BSTR *sVal, [in,out] long *lVal, [in] BOOL bCreate, [out,retval] long * pVal);
+		[id(18), helpstring("method SetPumpModeScheme")] HRESULT SetPumpModeScheme([in] long lPumpNumber, [in] long lScheme, [in] long lMode, [in] BSTR sDateTimeStart, [in] BSTR sDateTimeEnd, [in] long lFlags, [out, retval] long *pVal);
+		[id(19), helpstring("method GetPumpModeScheme")] HRESULT GetPumpModeScheme([in] long lPumpNumber, [in] long lScheme, [out] long  *plMode, [out] BSTR *psDateTimeStart, [out] BSTR *psDateTimeEnd, [out] long *plFlags, [out, retval] long *pVal);
+		[id(20), helpstring("method SetModeDef")] HRESULT SetModeDef([in] long lMode, [in] BSTR sName, [in] long lFlags, [out, retval] long *pVal);
+		[id(21), helpstring("method GetModeDef")] HRESULT GetModeDef([in] long lMode,[out] BSTR *psName, [out] long *plFlags, [out, retval] long *pVal);
+		[id(22), helpstring("method GetParam1")] HRESULT GetParam1([in] BSTR sTableAndFieldName,[in] long lKey1,[in] long lKey2,[in] short nFiledType,[out] BSTR *sVal,[out] long *lVal, [out,retval] long *pVal);
+		[id(23), helpstring("method SetParam1")] HRESULT SetParam1([in] BSTR sTableAndFieldName, [in] long lKey1,[in] long lKey2,[in] short nFiledType,[in] BSTR sVal,[in] long lVal,[in] BOOL bCreate, [out,retval] long * pVal);
+		[id(24), helpstring("method SetParam2")] HRESULT SetParam2([in] BSTR sTableFieldAndVal, [in] long lKey1,[in] long lKey2,[in] short nFiledType,[in] long lVal,[in] BOOL bCreate, [out,retval] long * pVal);
+		[id(25), helpstring("method GetParam2")] HRESULT GetParam2([in,out] BSTR *sTableFieldAndVal,[in] long lKey1,[in] long lKey2,[in] short nFiledType,[out] long *lVal, [out,retval] long *pVal);
+		[id(26), helpstring("method GetRecord")] HRESULT GetRecord([in,out] BSTR *sTableAndVal, [in] long lKey1,[in] long lKey2,[out,retval] long *pVal);
+		[id(27), helpstring("method SetRecord")] HRESULT SetRecord([in] BSTR sTableAndVal, [in] long lKey1,[in] long lKey2,[out,retval] long *pVal);
+		[id(28), helpstring("method GetTankReading2")] HRESULT GetTankReading2([in] short nFlags, [in,out] long *lIndexNumber, [out] long *lTank, [out] long *lProduct, [out] long *lStatus1, [out] short *nReadingFlags, [out] long *lFuelLevel, [out] long *lWaterLevel, [out] long *lTemperature, [out] long *lFuelVolume, [out] long *lWaterVolume, [out] long *lActiveReadNumber, [out] long *lShiftNumber, [out] BSTR *sDateTime, [out] long *lStatus2, [out] long *lFuelValue, [out] long *lPricePerLitre,[out,retval] long *pVal);
+		[id(29), helpstring("method GetPumpTotals2")] HRESULT GetPumpTotals2([in] short nFlags, [in,out] long *lIndexNumber,[out] long *lPump,[out] short *nNozzle,[out] short *nGrade,[out] short *nTotalsFlags,[out] BSTR *sVolume,[out] BSTR *sValueA,[out] BSTR *sValueB,[out] long *lActiveReadNumber,[out] long *lShiftNumber,[out] BSTR *sDateTime,[out] long *lPumpStatus,[out] long *lNozzleStatus,[out,retval] long *pVal);
+		[id(30), helpstring("method GetDeliveryReport2")] HRESULT GetDeliveryReport2([in] short nFlags, [in,out] long *lIndexNumber,[out] long *lTank,[out] long *lProduct,[out] long *lStatus,[out] short *nDeliveryFlags,[out] long *lTag,[out] long  *lDeliveredVolume,[out] long *lActiveReadNumber,[out] long *lShiftNumber,[out] BSTR *sStartDeliveryDateTime,[out] BSTR *sEndDeliveryDateTime,[out] long *lStartVolume,[out] long *lEndVolume,[out] long *lTemperature,[out,retval] long *pVal);
+		[id(31), helpstring("method GetAlarm")] HRESULT GetAlarm([in] short nFlags, [in,out] long *lIndexNumber,[out] long *plCatagory, [out] long *plCode, [out] long *plParameter, [out] BSTR *psStartDateAndTime, [out] BSTR *psEndDateAndTime, [out] long *plActiveReadNumber, [out] long *plShiftNumber ,[out,retval] long *pVal);
+		[id(32), helpstring("method RemoveAlarm")] HRESULT RemoveAlarm([in] short nFlags, [in] long lRecIndex, [out,retval] long * pVal);
+		[id(33), helpstring("method GetServiceStatus")] HRESULT GetServiceStatus([in] long lService,[out] long *lStatus, [out,retval] long *pVal);
+		[id(34), helpstring("method StopService")] HRESULT StopService([in] long lService, [out,retval] long *pVal);
+		[id(35), helpstring("method StartService")] HRESULT StartService([in] long lService, [out,retval] long *pVal);
+		[id(36), helpstring("method GetWetStockData")] HRESULT GetWetStockData([in] long lWetStockFlags, [out,retval] long *pVal);
+		[id(37), helpstring("method ReConfigure")] HRESULT ReConfigure([in] long lConfigureFlags, [out,retval] long *pVal);
+		[id(38), helpstring("method GetPOSInfo")] HRESULT GetPOSInfo([out] BSTR *sPOSInfo, [out, retval] long *pVal);
+		[id(39), helpstring("method SetMaintenance")] HRESULT SetMaintenance([in] long lLock, [in] long lParam, [out, retval] long *pVal);
+		[id(40), helpstring("method GetParam3")] HRESULT GetParam3([in] BSTR sParamPosition, [in] long lKey1, [in]  long lKey2, [in]  short nFiledType, [in,out]  BSTR *sVal, [in,out]  long *lVal, [in]  BOOL bCreate,  [out, retval]  long *pVal);
+		[id(41), helpstring("method SetParam3")] HRESULT SetParam3([in]  BSTR sParamPosition, [in]  long lKey1, [in] long lKey2, [in] short nFiledType,  [in] BSTR sVal, [in]  long lVal, [in] BOOL bCreate, [out, retval]  long *pVal);
+		[id(42), helpstring("method SetGradePrice2")] HRESULT SetGradePrice2([in] long lPumpNumber, [in] short nNozzle, [in] short nGrade,  [in] long lMode, [in] short nLevel, [in] long lPrice, [in] BSTR sTimeValid, [in] short nFlags, [in] long lTaxRate, [in] long lDiscountPerUnit , [in] long lMaxUnitForDiscount, [out,retval] long *pVal);
+		[id(43), helpstring("method SetPumpModeScheme2")] HRESULT SetPumpModeScheme2([in]  long lPumpNumber,  [in]  long lScheme,  [in] long lMode, [in]  BSTR sPeriodDateTimeStart, [in]  BSTR sPeriodDateTimeEnd, [in]  BSTR sDateTimeStart, [in]  BSTR sDateTimeEnd,  [in]  long lFlags,  [out, retval]  long *pVal);
+		[id(44), helpstring("method GetPumpModeScheme2")] HRESULT GetPumpModeScheme2([in] long lPumpNumber, [in] long lScheme, [out]  long  *plMode , [out]   BSTR *psPeriodDateTimeStart, [out]  BSTR *psPeriodDateTimeEnd, [out]   BSTR *psDateTimeStart, [out] BSTR *psDateTimeEnd,  [out]   long *plFlags, [out, retval]  long *pVal);
+		[id(45), helpstring("method GetServiceFee")] HRESULT GetServiceFee([in] long lPump, [in] long lTrsType, [in] long lTrsNumber ,[in] BSTR stTime, [in] long lFlags, [out] long* pValue,    [out, retval]long *pRetVal);
+		[id(46), helpstring("method SetServiceFee")] HRESULT SetServiceFee([in] long lFeeNumber, [in] BSTR sName ,[in] long lFlags ,[in] long lPakFee,[in] long lPrePayFee,[in] long lPapFee,[in] long lAviFee, [in]long lAttendFee,[out, retval] long *pRetVal);
+		[id(47), helpstring("method SetPumpModeScheme3")] HRESULT SetPumpModeScheme3([in]  long lPumpNumber,  [in]  long lScheme,  [in] long lMode, [in]  BSTR sPeriodDateTimeStart, [in]  BSTR sPeriodDateTimeEnd, [in]  BSTR sDateTimeStart, [in]  BSTR sDateTimeEnd,  [in] long lServiceFeeNo, [in]  long lFlags,  [out, retval]  long *pVal);
+		[id(48), helpstring("method GetPumpModeScheme3")] HRESULT GetPumpModeScheme3([in] long lPumpNumber, [in] long lScheme, [out]  long  *plMode , [out]   BSTR *psPeriodDateTimeStart, [out]  BSTR *psPeriodDateTimeEnd, [out]   BSTR *psDateTimeStart, [out] BSTR *psDateTimeEnd, [out] long *plServiceFeeNo, [out]   long *plFlags, [out, retval]  long *pVal);
+		[id(49), helpstring("method InitEventsInterface")] HRESULT InitEventsInterface([in] long lFlags,[in,out] long *pClientId,[out,retval] long* pVal);
+		[id(50), helpstring("method CloseEventsInterface")] HRESULT CloseEventsInterface([in] long lClientId,[out,retval] long* pVal);
+		[id(51), helpstring("method SetServiceFee2")] HRESULT SetServiceFee2([in] long lFeeNumber, [in] BSTR sName,[in] long lFlags ,[in] long lPakFee, [in] long lPrePayFee,[in] long lPapFee, [in] long lAviFee, [in] long lAttendFee,[in] long lSelfPakFee, [in] long lSelfPrePayFee,[in] long lSelfPapFee, [in] long lSelfAviFee, [in] long lSelfAttendFee, [out, retval] long *pRetVal);
+		[id(52), helpstring("method TLSCommand")] HRESULT TLSCommand([in] BSTR sCommand , [in] long lCommand , [in] long lTankNumber , [in] long lFlags , [out , retval] long *plRetVal);
+		[id(53), helpstring("method ResetQdxInfo")] HRESULT ResetQdxInfo([in] long lFileNum, [in] long lPumpNum, [in] long lFlags1, [in] long lFlags2, [out,retval] long* pVal);
+		[id(54), helpstring("method InitDebit")] HRESULT InitDebit([in] long lPumpGroup01 , [in] long lPumpGroup2 , [in] long lFlags , [out,retval]long *pVal);
+		[id(55), helpstring("method UpdateControllerSoftware")] HRESULT UpdateControllerSoftware([in] BSTR sFileFullPath, [in] long lFlags,[out,retval] long *pVal);
+		[id(56), helpstring("method GetTankReading3")] HRESULT GetTankReading3([in] short nOpCode, [in,out] long *lIndexNumber, [out] long *lTank, [out] long *lProduct, [out] long *lStatus1, [out] short *nReadingFlags, [out] long *lFuelLevel, [out] long *lWaterLevel, [out] long *lTemperature, [out] long *lFuelVolume, [out] long *lWaterVolume, [out] long *lActiveReadNumber, [out] long *lShiftNumber, [out] BSTR *sDateTime, [out] long *lStatus2, [out] long *lFuelValue, [out] long *lPricePerLitre,[out] long *lTcVolume, [out] long *lUllage, [in,out] long *lFlags, [out] BSTR *sRec ,[out,retval] long *pVal);															   
+		[id(57), helpstring("method ReloadPricePolesData")] HRESULT ReloadPricePolesData([in] long lFlags, [out,retval] long *pVal);
+		[id(58), helpstring("method GetPumpDevices")] HRESULT GetPumpDevices([in] long lGrade , [in] long lNacsCode , [in] long lDevice , [in] long lFlags , [out] long * pVal , [out ,retval] long * pRetVal);
+		[id(59), helpstring("method GetTankInfo")] HRESULT GetTankInfo([in] long lTankNumber , [out] BSTR * pRec , [in] long lFlags , [out , retval] long * pRetVal);
+		[id(60), helpstring("method GetPumpTotalsInfo")] HRESULT GetPumpTotalsInfo([in] long lPumpNumber , [in] long lFlags , [out] BSTR * pRec , [out , retval] long * pRetVal);
+		[id(61), helpstring("method GetDeliveryInfo")] HRESULT GetDeliveryInfo([in] long lTankNumber , [out] BSTR * pRec , [in] long lFlags , [out , retval] long * pRetVal);
+		[id(62), helpstring("method Reconfigure2")] HRESULT Reconfigure2([in] long lTableId , [in] long lSubTableId , [in] long lSubTableIdExt , [in] long lFlags , [out , retval] long * pRetVal);
+		[id(63), helpstring("method GeneralSystemRequest")] HRESULT GeneralSystemRequest([in] long lVal, [in] BSTR sRec, [in] long lFlags , [out,retval] long *plVal);		
+		[id(64), helpstring("method GetTankMemoryData")] HRESULT GetTankMemoryData([in] long lTankNumber,[out] BSTR  *pRec, [in] long lFlags, [in,out]long  *lCounter ,[retval][out] long *pVal);
+		[id(65), helpstring("method DBTankGauge")] HRESULT DBTankGauge([in] long lOffset ,[in,out] BSTR *sRec, [in] long lRecSize, [in] long lFlags, [out, retval]long *pVal);
+		[id(66), helpstring("method TankGaugeData")] HRESULT TankGaugeData([in]long lTankNumber, [in] long lFlags, [in] BSTR sRec,  [out, retval]long *pVal);
+		[id(67), helpstring("method GetConnectivityStatus")] HRESULT GetConnectivityStatus([out] BSTR* sPSConnStatus, [in] long lFlags, [out,retval] long *pVal);				
+		[id(68), helpstring("method GetAccumulateTotals")] HRESULT GetAccumulateTotals([in] long lShiftNumber , [in] long lState, [in] long lPosNumber, [in] long lFlags, [in ] long lVal,  [in] BSTR sStartTime, [in] BSTR sEndTime, [out] long *lRecordCount,   [in, out] BSTR* sRec, [out, retval] long *pVal);
+		[id(69), helpstring("method SetAccumulateState")] HRESULT SetAccumulateState([in] long lShiftNumber ,[in] long lPosNumber, [in] long lState,[in] long lFlags, [out, retval] long *pVal);
+		[id(70), helpstring("method SetModeDef2")] HRESULT SetModeDef2([in] long lMode,  [in] BSTR sRec,  [in] long lFlags, [in] long lMsgNumber, [out, retval] long *plVal);
+		[id(71), helpstring("method GetModeDef2")] HRESULT GetModeDef2([in] long lMode,[out] BSTR *psRec, [out] long *plFlags, [out] long *plMsgNumber,[out, retval] long *pVal);
+		[id(72), helpstring("method GetGeneralData")] HRESULT GetGeneralData([in] long lRecordType,[out] BSTR* sData, [in] long lFlags, [out, retval] long *pVal);
+		[id(73), helpstring("method SetServiceFeeMode")] HRESULT SetServiceFeeMode([in]long lPumpNumber, [in]long lFeeSet,[in] long Flags, [out, retval]long *pVal);
+		[id(74), helpstring("method GetServiceFeeMode")] HRESULT GetServiceFeeMode([in]long lPumpNumber, [out]long *lFeeSet, [in]long lFlags, [out, retval]long *pVal);
+		[id(75), helpstring("method InitParam")] HRESULT InitParam([in] long lFlags,[out] BSTR * sPCIXml,[out,retval] long *pVal);
+		[id(76), helpstring("method GetPaidTrs")] HRESULT GetPaidTrs([in] long lClientId,[in] long lFlags,[out] BSTR * pRec,[in,out] long * lCountRec,[out,retval] long * plRetVal);
+		[id(77), helpstring("method GetPumpTotalsMemoData")] HRESULT GetPumpTotalsMemoData([in] long lPumpNumber,[in] long lFlags,[out] BSTR * pRec,[out]  long *lCounter ,[in,out] long * pRetVal);
+		[id(78), helpstring("method GetReceipt2")] HRESULT GetReceipt2([in] long lPosNumber,[in] BSTR sTrack2,[in] long lIndex,[out] BSTR *sReceiptData,[in] long lFlags, [out,retval] long *pVal);
+		[id(79), helpstring("method GetTankReadingEx")] HRESULT GetTankReadingEx([in] long lOpCode,[in , out] long *lIndexNumber,[in] long lTankNumber,  [in] long lFlags, [out] BSTR *pRec, [out,retval] long *pVal);
+		[id(80), helpstring("method GetDeliveryReportEx")] HRESULT GetDeliveryReportEx([in] long lOpCode, [in , out] long *lIndexNumber, [in] long lFlags, [out] BSTR *pRec, [out,retval] long *pVal);
+		[id(81), helpstring("method IsUnmanned")] HRESULT IsUnmanned([out] BOOL * pbUnmanned, [out,retval] long *pVal);
+		[id(82), helpstring("method GetVersion")] HRESULT GetVersion([out] BSTR *sVersionList, [in] long lFlags , [out,retval] long *pVal);
+		[id(83), helpstring("method SetupEx")] HRESULT SetupEx([in] BSTR sXmlRec, [in] long lFlags, [out,retval] long *pVal);
+		[id(84), helpstring("method StartQdxMaintenance")] HRESULT StartQdxMaintenance([in] long lFileNum, [out,retval] long *pVal);
+		[id(85), helpstring("method GetStationStatus")] HRESULT GetStationStatus([in , out] long * lPumpMap1 , [in , out] long * lPumpMap2 , [in] long lFlags , [out , retval] long * pRetVal);
+		[id(86), helpstring("method GetDeliveryEmulationStatus")] HRESULT GetDeliveryEmulationStatus([in] long lTankNumber, [in] long lFlags, [out] long * plStatus,[out] BSTR *pRec, [out , retval] long * pRetVal);
+		[id(87), helpstring("method GetChangeProductInTankStatus")] HRESULT GetChangeProductInTankStatus([in] long lFlags, [out] long *plStatus, [out] long * plErrorCode, [out] BSTR * pbstrData, [out,retval] long *plVal);
+		[id(88), helpstring("method GetProcessStatusEx")] HRESULT GetProcessStatusEx([in] long lFlags, [in] long lProcessType, [out] long *plStatus, [out] long *plErrorCode, [out] BSTR *pbstrData, [out, retval] long *plVal);
+		[id(89), helpstring("method SetParam4")] HRESULT SetParam4([in] BSTR sTableName, [in] long lKey1, [in] long lKey2, [in] BSTR sFiledName, [in] short nFiledType, [in] BSTR sVal, [in] long lVal, [in] BOOL bCreate,  [in] long lFlags, [out,retval] long * pVal);
+		[id(90), helpstring("method GetPumpTotalsEx")] HRESULT GetPumpTotalsEx([in] long lOpCode, [in,out] long *lIndexNumber, [in] long lPumpNumber, [in] long lNozzle, [in] long lFlags, [out] BSTR *pRec, [out,retval] long * pVal);
+		[id(91), helpstring("method GetRollingUpdateInfo")] HRESULT GetRollingUpdateInfo([in] long lPumpNumber, [in] long lFlags, [out] BSTR *pbstrData, [out,retval] long *pVal);
+		[id(92), helpstring("method SetAlarm")] HRESULT SetAlarm([in] long lCatagory, [in] long lSubCatagory, [in] long lAlarmNumber, [in] long lDevice, [in] long lAlarmStatus, [in] long lAlarmValue, [in] long lFlags, [out] long *pAlarmId, [in] BSTR sRec, [out, retval] long *pVal);
+		[id(93), helpstring("method GetConfiguration")] HRESULT GetConfiguration([in] BSTR  sClientName, [out] BSTR * sConfigurationData, [out, retval] long *pVal);
+		[id(94), helpstring("method SetTankState")] HRESULT SetTankState([in] long lTankNumber, [in] long lState, [in] long lFlags, [in] BSTR sRec, [out, retval] long * pRetVal);
+		[id(95), helpstring("method GetTankState")] HRESULT GetTankState([in] long lTankNumber, [in] long lFlags, [in, out] BSTR* pRec, [out, retval] long * pRetVal);
+		[id(96), helpstring("method SmartReconfigure")] HRESULT SmartReconfigure([in] long lDeviceNumberMask1, [in] long lDeviceNumberMask2, [in] long lTableId, [in] long lSubTableId, [in] long lSubTableIdExt, [in] long lFlags, [out, retval] long * pRetVal);
+	};
+[
+	uuid(455634A1-1A48-11D1-B8A5-0000E8D0CBF8),
+	version(1.0),
+	helpstring("PumpSrv 1.0 Type Library")
+]
+library PUMPSRVLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[ // the sink interface
+		uuid(DCCF1278-5F73-4a6e-BC58-68A37316612D),
+		helpstring("ICtrlEvents Interface")
+	]
+	dispinterface ICtrlEvents
+	{
+		properties:
+		methods:										  
+		[id(1), helpstring("method NewPumpSrvData")] HRESULT NewPumpSrvData([in] long lDataId,[in] long lFlags);
+		[id(2), helpstring("method GetVersions")] HRESULT GetVersions();
+	};
+	[
+		uuid(3059961A-1632-44C7-A0E8-D0E75270FC81),
+		helpstring("IGPIEvents Interface")
+	]
+	dispinterface IGPIEvents
+	{
+		properties:
+		methods:
+	//	[id(1), helpstring("method Test")] HRESULT Test([in] LONG lNum);
+	//	[id(1), helpstring("method TestGpiEvent")] HRESULT TestGpiEvent();
+
+		[id(1), helpstring("method SetPumpStatus")] HRESULT SetPumpStatus([in] long lPumpNumber, [in] long lStatus, [in] long lRes, [in] long lResExtl,[in] long lFlags, [in] long lParam1);
+		[id(2), helpstring("method PAKReadyTransaction")] HRESULT PAKReadyTransaction([in]long lPumpNumber,[in]long lTrsNumber,[in] long nNozzle,[in]long lVolume,[in]long lValue,[in]long nLevel,[in]long lGradePrice, [in] long nGrade,[in] long lRetCode,[in] long lFlags, [in] BSTR sData);
+		[id(3), helpstring("method SetPumpMode")] HRESULT SetPumpMode([in] long lPumpNumber,[in] long lMode,[in] long lServiceMode,[in] long lServiceFee,[in] long lPriceLevel,[in] long lFlags);
+		[id(4), helpstring("method PAPSwipeResult")] HRESULT PAPSwipeResult([in] long lPumpNumber,[in] long lDeviceNumber,[in] long lSeqNumber,[in] long lRetCode,[in] long lFlags,[in] BSTR sData);
+		[id(5), helpstring("method CancelTrs")] HRESULT CancelTrs([in] long lPumpNumber, [in] long lSrc, [in] long lRes, [in] long lPumpStatus, [in] long lTrsNumber);
+		[id(6), helpstring("method GetReceiptTransactionDetails")] HRESULT GetReceiptTransactionDetails([in] long lPumpNumber, [in]  BSTR  Track, [in] long lFlags, [out] BSTR *pRec, [out] long *lRecordsCount);
+		[id(7), helpstring("method GetReceipt")] HRESULT GetReceipt([in] long lPumpNumber, [in] BSTR sInvoiceNumber, [out] BSTR *sReceipt);
+		[id(8), helpstring("method GeneralSystemEvent")] HRESULT GeneralSystemEvent([in] long lEventId, [in] long lFlags, [in] long lParam1);
+		[id(9), helpstring("method WashCodeReady")] HRESULT WashCodeReady([in] long lDevice,[in] long lSyncNumber,[in] long lFlags);
+		[id(10),helpstring("method Reconfigure")] HRESULT Reconfigure([in] long lTableId,[in] long lSubTableId,[in] long lSubTableIdExt,[in] long lFlags);
+		[id(11),helpstring("method SetPreSetLimit")] HRESULT SetPreSetLimit([in] long lPumpNumber, [in] long lPresetLimitType, [in] long lPresetLimitValue);
+		[id(12), helpstring("method TrsStateChanged")] HRESULT TrsStateChanged(long lPumpNumber, long lTrsNumber, long lState, long lFlags);
+		[id(13), helpstring("method SetPromotionsDetails")] HRESULT SetPromotionsEvent(long lPumpNumber, long lFlags); // 4.0.19.1750 TD  349356
+		[id(14), helpstring("method SetPumpStatusEx")] HRESULT SetPumpStatusEx([in] long lPumpNumber, [in] long lStatus, [in] long lRes, [in] long lResExtl, [in] long lFlags, [in] long lLimit, [in] long lGrade, [in] long lPosition, [in] BSTR sData);
+	};
+
+	[
+		uuid(7C9373A2-1D37-11D1-B8A5-0000E8D0CBF8),
+		helpstring("GPI Class")
+	]
+	coclass GPI
+	{
+		[default] interface IGPI;
+		[default,source] interface IGPIEvents;
+	};
+	[
+		uuid(7C9373A4-1D37-11D1-B8A5-0000E8D0CBF8),
+		helpstring("GCI Class")
+	]
+	coclass GCI
+	{
+		[default] interface IGCI;
+		[default,source] interface IGCIEvents;
+	};
+	[
+		uuid(43464622-C31A-11D1-8625-0000E81A8D8B),
+		helpstring("Ctrl Class")
+	]
+	coclass Ctrl
+	{
+		[default] interface ICtrl;
+		[default,source] dispinterface ICtrlEvents;
+	};
+};

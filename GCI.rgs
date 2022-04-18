@@ -1,0 +1,22 @@
+HKCR
+{
+	PumpSrv.GCI.1 = s 'GCI Class'
+	{
+		CLSID = s '{7C9373A4-1D37-11D1-B8A5-0000E8D0CBF8}'
+	}
+	PumpSrv.GCI = s 'GCI Class'
+	{
+		CurVer = s 'PumpSrv.GCI.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {7C9373A4-1D37-11D1-B8A5-0000E8D0CBF8} = s 'GCI Class'
+		{
+			ProgID = s 'PumpSrv.GCI.1'
+			VersionIndependentProgID = s 'PumpSrv.GCI'
+			ForceRemove 'Programmable'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '{455634A2-1A48-11D1-B8A5-0000E8D0CBF8}'
+		}
+	}
+}

@@ -1,0 +1,4 @@
+<!-- edited with XMLSpy v2007 sp2 (http://www.altova.com) by Retalix Dallas (Retalix Dallas) -->
+<TankReadingInfo>
+	<Tank TankID="7" Product="2" Status="0" FuelLevel="1440666" Temperature="25000" WaterLavel="800000" WaterVolume="800000" FuelVolume="144000012" FuelWeight="1234567" ActiveReadNumber="2" ShiftNumber="10" FuelValue="1234567" PricePerLitre="123456" TcVolume="123456" Ullage="800000" DateAndTime="2009-07-09,17:04:17" Density="123456" TankOnline="1" DeliveryInProg="0" TankGaugeReadDate="09-07-09" TankGaugeReadTime="17:04" AdditionalCode="300002" Capacity="160000" EndOfShiftStatus="1" ShiftAccumulatedSales="1524000" ShiftAccumulatedDeliveryVolume="3450200"/>
+</TankReadingInfo>

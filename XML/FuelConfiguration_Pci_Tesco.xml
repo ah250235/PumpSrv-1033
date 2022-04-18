@@ -1,0 +1,15 @@
+<FuelConfiguration>
+   <MetaData Date="02/03/2008" Time="18:21:09" ActivationMode="Lock" BackUp="0"><!--ActivationMode - Can be OnNextStartUp, or Immidiate or Lock--></MetaData>
+   <Configuration Source="Tesco BOS">
+      <Data TableName="GeneralParam" TableId="1048576" SubTableId="512" SubTableIdExt="0" Flags="0">
+         <Parameters>
+            <Param Name="DisableEncrypt" Value="0" Type="0"><!--Store Mode = DisableEncrypt & DSSTestMode--></Param>
+            <Param Name="DSSTestMode" Value="0" Type="0"/>
+            <Param Name="PCIExcludesLoyalty" Value="0" Type="0"/>
+            <Param Name="PCICompliant" Value="1" Type="0"/>
+            <Param Name="DSSActive" Value="1" Type="0"/>
+            <Param Name="DSSAlgorithm" Value="3" Type="0 "/>
+         </Parameters>
+      </Data>
+   </Configuration>
+</FuelConfiguration>

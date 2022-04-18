@@ -1,0 +1,1336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{b2d04129-edbc-44c6-96df-47ca5a392f53}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{9c214072-631e-4b43-be86-63d853815c99}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{4ff0050d-49f8-4bb9-b52c-cc8e1d1da82e}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Encryption">
+      <UniqueIdentifier>{f1fb0e57-f2fd-42a0-9147-a0683b5995b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Encryption\DSS">
+      <UniqueIdentifier>{9c188778-27f1-404d-b6d6-ca3525c88ad6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Encryption\DPS">
+      <UniqueIdentifier>{354ec466-c053-4e35-92e1-911ed193a477}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OLA">
+      <UniqueIdentifier>{7958a3b9-eec2-414a-82c6-b020f6317d31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="convert">
+      <UniqueIdentifier>{6e80b126-7b2c-4098-b24a-16bdc432de86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VP">
+      <UniqueIdentifier>{e2f5f855-fd42-4e96-8b46-7b3baf6af3e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL Database files">
+      <UniqueIdentifier>{9efd939d-b547-42fa-996b-46ce88c53e5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Loyalty">
+      <UniqueIdentifier>{da55441b-ae33-4433-8c1f-897c0f9a43c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Loyalty\NMP">
+      <UniqueIdentifier>{b866a034-663f-4509-8374-e979a0962665}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Loyalty\EventHandlers">
+      <UniqueIdentifier>{14c8dc37-fa38-4b0c-98d2-0facf2bd6043}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Loyalty\Command executer">
+      <UniqueIdentifier>{b03cd342-db89-4129-b389-686dbb728eeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Loyalty\Flowobjects">
+      <UniqueIdentifier>{d4fe8957-25bd-4e41-94d6-d1e7a380bad0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TAX">
+      <UniqueIdentifier>{7c672dcf-e0b0-4184-b203-f4cbbc21f4dd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AccumulationShiftTotal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AlarmConvert.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AlarmData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AlarmSrv.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AlarmSrvPS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseFuelingRestriction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseReceipt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BasicProtectData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BuildLine2PosPump.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CardSaleAllData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CarWash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CashAcceptor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CashAcceptorFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CFGEventsHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ChangeProductInTank.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CmdInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonFunction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CompChecker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CompConnectivity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfigurationThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataExport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DB.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DebitInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DelayedPrePay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DeliveryEmulationSingleTankServerInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceRecord.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EventManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ExceptionHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ExtendedGradeMap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FleetCard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowRate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ForecourtFuelingRestriction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ForecourtProductList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FuelingRestriction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GAIEventsHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GCI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GPI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GPIEventManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Grade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Hydra.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HydraPS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IniFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InitDebitHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Param.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="POSFuelingRestriction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PosInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PriceChangeFlags.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PriceChangeWithAckPerPump.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Promotion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProtectedDataHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProtectedReceipt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pump.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PumpLock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PumpLockbyTank.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PumpTotalsXml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QDXMaintThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QLogger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ReceiptExtraIndexFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RegTable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RelativeDoubleRecord.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Report.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ReportGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RTEventsHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RTIEventsHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShiftDelivery.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShiftProcess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShiftTanks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShiftTotals.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SinglePumpLock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleShiftAccumMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleShiftAccumulations.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SiteConfigurationExporter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StoreLineOLA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tank.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TankGaugeFactor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TankLevelProtection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TankXML.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TerminalMessages.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeOutManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TotalPumpInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Track2Receipt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TrsLog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WetStockDetails.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="XmlConvertor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="XmlConvertorEx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="XmlParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DSSBothAlg.cpp">
+      <Filter>Encryption\DSS</Filter>
+    </ClCompile>
+    <ClCompile Include="DSSBothAsymmetricAlg.cpp">
+      <Filter>Encryption\DSS</Filter>
+    </ClCompile>
+    <ClCompile Include="DSSEncodeHandler.cpp">
+      <Filter>Encryption\DSS</Filter>
+    </ClCompile>
+    <ClCompile Include="DSSEncryptAlg.cpp">
+      <Filter>Encryption\DSS</Filter>
+    </ClCompile>
+    <ClCompile Include="DSSHashAlg.cpp">
+      <Filter>Encryption\DSS</Filter>
+    </ClCompile>
+    <ClCompile Include="DPSEncryptAlg.cpp">
+      <Filter>Encryption\DPS</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseEncodeHandler.cpp">
+      <Filter>Encryption</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseEncodingAlg.cpp">
+      <Filter>Encryption</Filter>
+    </ClCompile>
+    <ClCompile Include="PCIEncodeHandler.cpp">
+      <Filter>Encryption</Filter>
+    </ClCompile>
+    <ClCompile Include="ola32.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OLA32Events.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OLA32EventSrv.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OLA32Srv.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OLABase.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OLAConnectedPayments.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OLADotNet.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OLAEps.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OLAEserviceSrv.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OLAEvents.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OLAHashAlg.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OLAPositive_FIPAYSrv.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OLAPositiveEventSrv.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OLAPositiveIFSF.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OLAPositiveSrv.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OLAPositiveUS.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OLAProgressSrv.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OLAProgressSrvEx.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OLARouteSrv.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OLAService2EventsHandler.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OLASimLinkSrv.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OlaSimulator.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OLASkeleton.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OLATcpBase.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OLATcpPositiveSrv.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="OlaTravelCenter.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="ConvertXML.cpp">
+      <Filter>convert</Filter>
+    </ClCompile>
+    <ClCompile Include="VpMng.cpp">
+      <Filter>VP</Filter>
+    </ClCompile>
+    <ClCompile Include="VPThread.cpp">
+      <Filter>VP</Filter>
+    </ClCompile>
+    <ClCompile Include="DeferralDiscountNMPDetails.cpp">
+      <Filter>Loyalty\NMP</Filter>
+    </ClCompile>
+    <ClCompile Include="NmpDetalis.cpp">
+      <Filter>Loyalty\NMP</Filter>
+    </ClCompile>
+    <ClCompile Include="phoneLoopUpNmpDetalis.cpp">
+      <Filter>Loyalty\NMP</Filter>
+    </ClCompile>
+    <ClCompile Include="FuelLoyaltyPSR.cpp">
+      <Filter>Loyalty</Filter>
+    </ClCompile>
+    <ClCompile Include="OLAEpsilon.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLPumpTotalsFile.cpp">
+      <Filter>SQL Database files</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLTankReadsFile.cpp">
+      <Filter>SQL Database files</Filter>
+    </ClCompile>
+    <ClCompile Include="AccountReceipt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLFuelDeliveriesFile.cpp">
+      <Filter>SQL Database files</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLPumpSrvFile.cpp">
+      <Filter>SQL Database files</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLExtraInfoFile.cpp">
+      <Filter>SQL Database files</Filter>
+    </ClCompile>
+    <ClCompile Include="PumpSrvDatabaseLogger.cpp">
+      <Filter>SQL Database files</Filter>
+    </ClCompile>
+    <ClCompile Include="PumpSrvDB.cpp">
+      <Filter>SQL Database files</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLReceiptDB.cpp">
+      <Filter>SQL Database files</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLPrePayFile.cpp">
+      <Filter>SQL Database files</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLCarWashFile.cpp">
+      <Filter>SQL Database files</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLOLATempTrs.cpp">
+      <Filter>SQL Database files</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLAlarmFile.cpp">
+      <Filter>SQL Database files</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLOLATrs.cpp">
+      <Filter>SQL Database files</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLItemsFile.cpp">
+      <Filter>SQL Database files</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLTankGauge.cpp">
+      <Filter>SQL Database files</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLAsh2000.cpp">
+      <Filter>SQL Database files</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLPaidTrsFile.cpp">
+      <Filter>SQL Database files</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLPumpSrvSingleShiftAccumulation.cpp">
+      <Filter>SQL Database files</Filter>
+    </ClCompile>
+    <ClCompile Include="CTendersCard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AuthorizeCardNMP.cpp">
+      <Filter>Loyalty\NMP</Filter>
+    </ClCompile>
+    <ClCompile Include="AuthorizeLoyaltyNMPDetails.cpp">
+      <Filter>Loyalty\NMP</Filter>
+    </ClCompile>
+    <ClCompile Include="AuthorizePaymentNMPDetails.cpp">
+      <Filter>Loyalty\NMP</Filter>
+    </ClCompile>
+    <ClCompile Include="CardDeclineNMPDetails.cpp">
+      <Filter>Loyalty\NMP</Filter>
+    </ClCompile>
+    <ClCompile Include="CarWashDiscountNMPDetails.cpp">
+      <Filter>Loyalty\NMP</Filter>
+    </ClCompile>
+    <ClCompile Include="CarWashSaleNMPDetalis.cpp">
+      <Filter>Loyalty\NMP</Filter>
+    </ClCompile>
+    <ClCompile Include="FuelingNMPDetails.cpp">
+      <Filter>Loyalty\NMP</Filter>
+    </ClCompile>
+    <ClCompile Include="SwipeCardNMPDetalis.cpp">
+      <Filter>Loyalty\NMP</Filter>
+    </ClCompile>
+    <ClCompile Include="SwipePaymentNMPDetails.cpp">
+      <Filter>Loyalty\NMP</Filter>
+    </ClCompile>
+    <ClCompile Include="ManualLoyaltyNMPDetails.cpp">
+      <Filter>Loyalty\NMP</Filter>
+    </ClCompile>
+    <ClCompile Include="MethodOfPaymentNMPDetails.cpp">
+      <Filter>Loyalty\NMP</Filter>
+    </ClCompile>
+    <ClCompile Include="RunQueryNMPDetails.cpp">
+      <Filter>Loyalty\NMP</Filter>
+    </ClCompile>
+    <ClCompile Include="PreAuthorizeScreen.cpp">
+      <Filter>Loyalty\NMP</Filter>
+    </ClCompile>
+    <ClCompile Include="PromptNMPDetails.cpp">
+      <Filter>Loyalty\NMP</Filter>
+    </ClCompile>
+    <ClCompile Include="LoyaltyNMPDetails.cpp">
+      <Filter>Loyalty\NMP</Filter>
+    </ClCompile>
+    <ClCompile Include="GLIEventsHandler.cpp">
+      <Filter>Loyalty\EventHandlers</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandExecuter.cpp">
+      <Filter>Loyalty\Command executer</Filter>
+    </ClCompile>
+    <ClCompile Include="CopientCommandExecuter.cpp">
+      <Filter>Loyalty\Command executer</Filter>
+    </ClCompile>
+    <ClCompile Include="LoyaltyCommandExecuter.cpp">
+      <Filter>Loyalty\Command executer</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseFlow.cpp">
+      <Filter>Loyalty\Flowobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicPapFlow.cpp">
+      <Filter>Loyalty\Flowobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="PakFlow.cpp">
+      <Filter>Loyalty\Flowobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="PapFlow.cpp">
+      <Filter>Loyalty\Flowobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeFlowChart.cpp">
+      <Filter>Loyalty</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowControlManager.cpp">
+      <Filter>Loyalty</Filter>
+    </ClCompile>
+    <ClCompile Include="ParitalApproveNMPDetalis.cpp">
+      <Filter>Loyalty\NMP</Filter>
+    </ClCompile>
+    <ClCompile Include="CandianTaxCalc.cpp">
+      <Filter>TAX</Filter>
+    </ClCompile>
+    <ClCompile Include="MutipleTaxCalculator.cpp">
+      <Filter>TAX</Filter>
+    </ClCompile>
+    <ClCompile Include="TaxCalc.cpp">
+      <Filter>TAX</Filter>
+    </ClCompile>
+    <ClCompile Include="GetMemberInfoNmpDetalis.cpp">
+      <Filter>Loyalty\NMP</Filter>
+    </ClCompile>
+    <ClCompile Include="FuelMobileSrvThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLItemsInfoTest.cpp">
+      <Filter>SQL Database files</Filter>
+    </ClCompile>
+    <ClCompile Include="PumpSrv.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLPumpSrvReceiptExtraInfoDB.cpp">
+      <Filter>SQL Database files</Filter>
+    </ClCompile>
+    <ClCompile Include="EmeraldLoyaltyCommandExecuter.cpp">
+      <Filter>Loyalty\Command executer</Filter>
+    </ClCompile>
+    <ClCompile Include="EpsilonLoyaltyCommandExecuter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GradeData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TargetMessageNMPDetails.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PumpSrvDatabase.cpp">
+      <Filter>SQL Database files</Filter>
+    </ClCompile>
+    <ClCompile Include="AltrenateIDNMPDetails.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FuelLoyaltyHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TicketPromotion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FuelCommon\ExtraFields.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ApplyCalcDiscountNMPDetail.cpp">
+      <Filter>Loyalty\NMP</Filter>
+    </ClCompile>
+    <ClCompile Include="OLAEpsilonDiscount.cpp">
+      <Filter>OLA</Filter>
+    </ClCompile>
+    <ClCompile Include="NMPFactory.cpp">
+      <Filter>Loyalty\Flowobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="OLAParam.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OLAPumpServiceMode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AccumulationShiftTotal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AlarmConvert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AlarmData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AlarmSrv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AlarmSrvPS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseEncodeHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseEncodingAlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseFuelingRestriction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseReceipt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicProtectData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BuildLine2PosPump.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CardSaleAllData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CarWash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CashAcceptor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CashAcceptorFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CFGEventsHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChangeProductInTank.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CmdInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="commonDef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonFunction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonStruct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CompChecker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CompConnectivity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigurationThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DataExport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DB.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DebitInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DelayedPrePay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DeliveryEmulationSingleTankServerInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceRecord.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EventManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ExceptionHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ExceptionHandlerMsg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ExtendedGradeMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FleetCard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowRate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ForecourtFuelingRestriction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ForecourtProductList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FuelingRestriction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GAIEventsHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GCI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GPI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GPIEventManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Grade.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Hydra.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HydraPS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IniFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InitDebitHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Param.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="POSFuelingRestriction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PosInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PriceChangeFlags.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PriceChangeWithAckPerPump.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProjectRemark.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Promotion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProtectedDataHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProtectedReceipt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Pump.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PumpClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PumpLock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PumpLockByTank.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PumpSrv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PumpSrvCP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PumpTotalsXml.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Q-DEX.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QDXMaintThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QLogger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Queue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ReceiptExtraIndexFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RegTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RelativeDoubleRecord.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Report.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ReportGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RTEventsHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RTIEventsHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerMain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShiftDelivery.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShiftProcess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShiftTanks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShiftTotals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SinglePumpLock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleShiftAccumMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleShiftAccumulations.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SiteConfigurationExporter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticString.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StoreLineOLA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tank.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TankGaugeFactor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TankLevelProtection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TankXML.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TerminalMessages.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeOutManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TotalPumpInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Track2Receipt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TrsLog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WetStockDetails.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="XmlConvertor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="XmlConvertorEx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="XmlDefinitions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="XmlParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DSSBothAlg.h">
+      <Filter>Encryption\DSS</Filter>
+    </ClInclude>
+    <ClInclude Include="DSSBothAsymmetricAlg.h">
+      <Filter>Encryption\DSS</Filter>
+    </ClInclude>
+    <ClInclude Include="DSSEncodeHandler.h">
+      <Filter>Encryption\DSS</Filter>
+    </ClInclude>
+    <ClInclude Include="DSSEncryptAlg.h">
+      <Filter>Encryption\DSS</Filter>
+    </ClInclude>
+    <ClInclude Include="DSSHashAlg.h">
+      <Filter>Encryption\DSS</Filter>
+    </ClInclude>
+    <ClInclude Include="DPSEncryptAlg.h">
+      <Filter>Encryption\DPS</Filter>
+    </ClInclude>
+    <ClInclude Include="PCIEncodeHandler.h">
+      <Filter>Encryption</Filter>
+    </ClInclude>
+    <ClInclude Include="OLA.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="ola32.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OLA32Events.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OLA32EventSrv.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OLA32Srv.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OLABase.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OLAConnectedPayments.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OLADotNet.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OLAEps.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OLAEserviceSrv.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OLAEvents.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OLAHashAlg.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OLAPositive_FIPAYSrv.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OLAPositiveEventSrv.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OLAPositiveIFSF.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OLAPositiveSrv.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OLAPositiveUS.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OLAProgressSrv.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OLAProgressSrvEx.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OLARouteSrv.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OLAService2EventsHandler.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OLASimLinkSrv.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OlaSimulator.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OLASkeleton.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OLATcpBase.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OLATcpPositiveSrv.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="OlaTravelCenter.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="ConvertXML.h">
+      <Filter>convert</Filter>
+    </ClInclude>
+    <ClInclude Include="VpMng.h">
+      <Filter>VP</Filter>
+    </ClInclude>
+    <ClInclude Include="VPThread.h">
+      <Filter>VP</Filter>
+    </ClInclude>
+    <ClInclude Include="DeferralDiscountNMPDetails.h">
+      <Filter>Loyalty\NMP</Filter>
+    </ClInclude>
+    <ClInclude Include="NmpDetalis.h">
+      <Filter>Loyalty\NMP</Filter>
+    </ClInclude>
+    <ClInclude Include="phoneLookUpNmpDetalis.h">
+      <Filter>Loyalty\NMP</Filter>
+    </ClInclude>
+    <ClInclude Include="FuelLoyaltyPSR.h">
+      <Filter>Loyalty</Filter>
+    </ClInclude>
+    <ClInclude Include="OLAEpsilon.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLPumpTotalsFile.h">
+      <Filter>SQL Database files</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLTankReadsFile.h">
+      <Filter>SQL Database files</Filter>
+    </ClInclude>
+    <ClInclude Include="AccountReceipt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLFuelDeliveriesFile.h">
+      <Filter>SQL Database files</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLPumpSrvFile.h">
+      <Filter>SQL Database files</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLExtraInfoFile.h">
+      <Filter>SQL Database files</Filter>
+    </ClInclude>
+    <ClInclude Include="PumpSrvDB.h">
+      <Filter>SQL Database files</Filter>
+    </ClInclude>
+    <ClInclude Include="PumpSrvDatabaseLogger.h">
+      <Filter>SQL Database files</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLReceiptDB.h">
+      <Filter>SQL Database files</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLPrePayFile.h">
+      <Filter>SQL Database files</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLCarWashFile.h">
+      <Filter>SQL Database files</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLAlarmFile.h">
+      <Filter>SQL Database files</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLOLATempTrs.h">
+      <Filter>SQL Database files</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLItemsFile.h">
+      <Filter>SQL Database files</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLTankGauge.h">
+      <Filter>SQL Database files</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLAsh2000.h">
+      <Filter>SQL Database files</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLPaidTrsFile.h">
+      <Filter>SQL Database files</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLPumpSrvSingleShiftAccumulation.h">
+      <Filter>SQL Database files</Filter>
+    </ClInclude>
+    <ClInclude Include="CTendersCard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AuthorizeCardNMP.h">
+      <Filter>Loyalty\NMP</Filter>
+    </ClInclude>
+    <ClInclude Include="AuthorizeLoyaltyNMPDetails.h">
+      <Filter>Loyalty\NMP</Filter>
+    </ClInclude>
+    <ClInclude Include="AuthorizePaymentNMPDetails.h">
+      <Filter>Loyalty\NMP</Filter>
+    </ClInclude>
+    <ClInclude Include="CardDeclineNMPDetails.h">
+      <Filter>Loyalty\NMP</Filter>
+    </ClInclude>
+    <ClInclude Include="CarWashDiscountNMPDetails.h">
+      <Filter>Loyalty\NMP</Filter>
+    </ClInclude>
+    <ClInclude Include="CarWashSaleNMPDetalis.h">
+      <Filter>Loyalty\NMP</Filter>
+    </ClInclude>
+    <ClInclude Include="FuelingNMPDetails.h">
+      <Filter>Loyalty\NMP</Filter>
+    </ClInclude>
+    <ClInclude Include="SwipeCardNMPDetalis.h">
+      <Filter>Loyalty\NMP</Filter>
+    </ClInclude>
+    <ClInclude Include="SwipePaymentNMPDetails.h">
+      <Filter>Loyalty\NMP</Filter>
+    </ClInclude>
+    <ClInclude Include="ManualLoyaltyNMPDetails.h">
+      <Filter>Loyalty\NMP</Filter>
+    </ClInclude>
+    <ClInclude Include="MethodOfPaymentNMPDetails.h">
+      <Filter>Loyalty\NMP</Filter>
+    </ClInclude>
+    <ClInclude Include="RunQueryNMPDetails.h">
+      <Filter>Loyalty\NMP</Filter>
+    </ClInclude>
+    <ClInclude Include="PreAuthorizeScreen.h">
+      <Filter>Loyalty\NMP</Filter>
+    </ClInclude>
+    <ClInclude Include="PromptNMPDetails.h">
+      <Filter>Loyalty\NMP</Filter>
+    </ClInclude>
+    <ClInclude Include="LoyaltyNMPDetails.h">
+      <Filter>Loyalty\NMP</Filter>
+    </ClInclude>
+    <ClInclude Include="GLIEventsHandler.h">
+      <Filter>Loyalty\EventHandlers</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandExecuter.h">
+      <Filter>Loyalty\Command executer</Filter>
+    </ClInclude>
+    <ClInclude Include="CopientCommandExecuter.h">
+      <Filter>Loyalty\Command executer</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseFlow.h">
+      <Filter>Loyalty\Flowobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicPapFlow.h">
+      <Filter>Loyalty\Flowobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="PakFlow.h">
+      <Filter>Loyalty\Flowobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="PapFlow.h">
+      <Filter>Loyalty\Flowobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="LoyaltyCommandExecuter.h">
+      <Filter>Loyalty\Command executer</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeFlowChart.h">
+      <Filter>Loyalty</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowControlManager.h">
+      <Filter>Loyalty</Filter>
+    </ClInclude>
+    <ClInclude Include="ParitalApproveNMPDetalis.h">
+      <Filter>Loyalty\NMP</Filter>
+    </ClInclude>
+    <ClInclude Include="CandianTaxCalc.h">
+      <Filter>TAX</Filter>
+    </ClInclude>
+    <ClInclude Include="MutipleTaxCalculator.h">
+      <Filter>TAX</Filter>
+    </ClInclude>
+    <ClInclude Include="TaxCalc.h">
+      <Filter>TAX</Filter>
+    </ClInclude>
+    <ClInclude Include="GetMemberInfoNmpDetalis.h">
+      <Filter>Loyalty\NMP</Filter>
+    </ClInclude>
+    <ClInclude Include="FuelMobileSrvThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLItemsInfoTest.h">
+      <Filter>SQL Database files</Filter>
+    </ClInclude>
+    <ClInclude Include="PumpSrvDatabase.h">
+      <Filter>SQL Database files</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLPumpSrvReceiptExtraInfoDB.h">
+      <Filter>SQL Database files</Filter>
+    </ClInclude>
+    <ClInclude Include="EmeraldLoyaltyCommandExecuter.h">
+      <Filter>Loyalty\Command executer</Filter>
+    </ClInclude>
+    <ClInclude Include="EpsilonLoyaltyCommandExecuter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GradeData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TargetMessageNMPDetails.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AltrenateIDNMPDetails.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FuelLoyaltyHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TicketPromotion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FuelCommon\ExtraFields.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplyCalcDiscountNMPDetail.h">
+      <Filter>Loyalty\NMP</Filter>
+    </ClInclude>
+    <ClInclude Include="OLAEpsilonDiscount.h">
+      <Filter>OLA</Filter>
+    </ClInclude>
+    <ClInclude Include="NMPFactory.h">
+      <Filter>Loyalty\Flowobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="OLAParam.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OLAPumpServiceMode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="PumpSrv.idl">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Ctrl.rgs">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="cursor1.cur">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GCI.rgs">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GPI.rgs">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PumpSrv.rgs">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PumpSrv.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

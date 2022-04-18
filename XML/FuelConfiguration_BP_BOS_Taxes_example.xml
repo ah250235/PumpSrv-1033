@@ -1,0 +1,25 @@
+<FuelConfiguration>
+   <MetaData Date="02/03/2010" Time="18:21:09" ActivationMode="Immidiate " BackUp="0"><!--ActivationMode - Can be OnNextStartUp, or Immidiate , Lock or SaveToFile--></MetaData>
+   <Configuration Source="BP BOS">
+      <Data TableName="Taxes\\Tax01" TableId="65536" SubTableId="0" SubTableIdExt="0" Flags="0">
+         <Parameters>
+            <Param Name="Included" Value="1" Type="0"/>
+            <Param Name="TaxID" Value="5" Type="0"/>
+            <Param Name="TaxRate" Value="16000" Type="0"/>
+            <Param Name="TaxPrintChar" Value="3" Type="1"/>
+            <Param Name="TaxName" Value="StateTax" Type="1"/>
+            <Param Name="ValidEntry" Value="1" Type="0"/>
+         </Parameters>
+      </Data>
+      <Data TableName="Taxes\\Tax02" TableId="65536" SubTableId="0" SubTableIdExt="0" Flags="0">
+         <Parameters>
+            <Param Name="Included" Value="1" Type="0"/>
+            <Param Name="TaxID" Value="6" Type="0"/>
+            <Param Name="TaxRate" Value="17000" Type="0"/>
+            <Param Name="TaxPrintChar" Value="g" Type="1"/>
+            <Param Name="TaxName" Value="CityTax" Type="1"/>
+            <Param Name="ValidEntry" Value="1" Type="0"/>
+         </Parameters>
+      </Data>
+   </Configuration>
+</FuelConfiguration>

@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{455634A2-1A48-11D1-B8A5-0000E8D0CBF8} = s 'PumpSrv'
+		'PumpSrv.EXE'
+		{
+			val AppID = s {455634A2-1A48-11D1-B8A5-0000E8D0CBF8}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+<FuelConfiguration>
+   <MetaData Date="12/07/2011" Time="16:30:00" ActivationMode="OnNextStartUp" BackUp="0"><!--ActivationMode - Can be OnNextStartUp, or Immidiate or Lock--></MetaData>
+   <Configuration Source="Tesco BOS">
+      <Data TableName="Receipt" TableId="0" SubTableId="0" SubTableIdExt="0" Flags="0">
+         <Parameters>
+            <Param Name="Header1" Value="" Type="1"/>
+            <Param Name="Header2" Value="" Type="1"/>
+            <Param Name="Header3" Value="" Type="1"/>
+            <Param Name="Header4" Value="" Type="1"/>
+            <Param Name="Header5" Value="" Type="1"/>
+            <Param Name="Header6" Value="" Type="1"/>
+            <Param Name="Header7" Value="" Type="1"/>
+            <Param Name="Header8" Value="" Type="1"/>
+			<Param Name="Header9" Value="" Type="1"/>
+			<Param Name="HeaderCount" Value="0" Type="0"/>
+         </Parameters>
+      </Data>
+   </Configuration>
+</FuelConfiguration>

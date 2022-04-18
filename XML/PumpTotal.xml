@@ -1,0 +1,4 @@
+<!-- edited with XMLSpy v2007 sp2 (http://www.altova.com) by Retalix Dallas (Retalix Dallas) -->
+<PumpReadingInfo>
+   <Pump PumpID="13" Nozzle="1" Grade="17" Volume="1111154000411111111" ValueA="1234567" ValueB="1234567" ActiveReadNumber="101" ShiftNumber="100" DateAndTime="2010-07-04,15:48:25" PumpStatus="1" NozzleStatus="0" EndOfShiftStatus="1" RollingUpdateVolume="12345" Tank1="12" Tank2="15" ShiftAccumulatedSales="500720" ShiftAccumulatedPumpTest="12000"/>
+</PumpReadingInfo>

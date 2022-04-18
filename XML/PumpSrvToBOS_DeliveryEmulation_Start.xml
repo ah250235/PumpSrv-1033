@@ -1,0 +1,1 @@
+<TankReadings><Tank TankID="1" Reference="321" FuelVolume="48460000" WaterVolume="1211500" Temperature="2500" LevelFactor="1000" TemperatureFactor="100" VolumeFactor="1000" Density="0" DensityFactor="1000" Weight="0" WeightFactor="1000" FuelLevel="2180" WaterLevel="120"/></TankReadings>
